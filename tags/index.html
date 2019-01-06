@@ -24,6 +24,13 @@
 
 
 
+  
+  
+    
+    
+  <script src="/lib/pace/pace.min.js?v=1.0.2"></script>
+  <link rel="stylesheet" href="/lib/pace/pace-theme-flash.min.css?v=1.0.2">
+
 
 
 
@@ -74,7 +81,7 @@
     root: '/',
     scheme: 'Mist',
     version: '6.7.0',
-    sidebar: {"position":"left","display":"post","offset":12,"b2t":false,"scrollpercent":false,"onmobile":false},
+    sidebar: {"position":"left","display":"post","offset":12,"b2t":false,"scrollpercent":true,"onmobile":true},
     fancybox: false,
     fastclick: false,
     lazyload: false,
@@ -103,7 +110,7 @@
 <meta property="og:site_name" content="JQM&#39;s site">
 <meta property="og:description" content="潘岳陆机赋何在？长江自水天下流。">
 <meta property="og:locale" content="zh-CN">
-<meta property="og:updated_time" content="2019-01-05T19:53:16.093Z">
+<meta property="og:updated_time" content="2019-01-05T19:53:18.000Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="tags">
 <meta name="twitter:description" content="潘岳陆机赋何在？长江自水天下流。">
@@ -374,6 +381,8 @@
 
   <aside id="sidebar" class="sidebar">
     
+      <div id="sidebar-dimmer"></div>
+    
     <div class="sidebar-inner">
 
       
@@ -522,6 +531,8 @@
     
       <div class="back-to-top">
         <i class="fa fa-arrow-up"></i>
+        
+          <span id="scrollpercent"><span>0</span>%</span>
         
       </div>
     
