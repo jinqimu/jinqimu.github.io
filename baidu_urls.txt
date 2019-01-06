@@ -8,9 +8,3 @@ dreamatom.top/2018/08/23/原-洛谷P1056排座椅-简单模拟/
 dreamatom.top/2018/08/23/原-map-size-洛谷P1540-简单模拟/
 dreamatom.top/2018/08/21/原-HDU1754-I-Hate-It/
 dreamatom.top/2018/08/19/原-sublime-ubuntu-amp-amp-windows-配置-注册/
-dreamatom.top/2018/08/18/原-KMP-hdu1686-poj3461-Oulipo/
-dreamatom.top/2018/08/17/原-小猪佩奇身上纹/
-dreamatom.top/2018/08/17/原-白书模板-poj2456-Aggressive-cows/
-dreamatom.top/2018/08/17/原-poj3461-Oulipo-Hash-kmp/
-dreamatom.top/2018/08/10/原-HDU1520-Anniversary-party-不要超时/
-dreamatom.top/2018/01/06/hello-world/
