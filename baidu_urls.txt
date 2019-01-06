@@ -1,4 +1,3 @@
-dreamatom.top/2019/01/06/hello-world/
 dreamatom.top/2019/01/06/西方经济学-宏观/
 dreamatom.top/2018/08/30/原-HPU-lib-河南理工大学图书馆-已借书籍爬取-Python/
 dreamatom.top/2018/08/28/原-codeforces-round-306-div2-B-Preparing-Olympiad-amp-amp-HPU-SummerCamp-round6-B-二进制枚举/
@@ -14,3 +13,4 @@ dreamatom.top/2018/08/17/原-小猪佩奇身上纹/
 dreamatom.top/2018/08/17/原-白书模板-poj2456-Aggressive-cows/
 dreamatom.top/2018/08/17/原-poj3461-Oulipo-Hash-kmp/
 dreamatom.top/2018/08/10/原-HDU1520-Anniversary-party-不要超时/
+dreamatom.top/2018/01/06/hello-world/
