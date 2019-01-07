@@ -1,3 +1,4 @@
+dreamatom.top/2019/01/07/V2Ray/
 dreamatom.top/2019/01/06/西方经济学-宏观/
 dreamatom.top/2018/08/30/原-HPU-lib-河南理工大学图书馆-已借书籍爬取-Python/
 dreamatom.top/2018/08/28/原-codeforces-round-306-div2-B-Preparing-Olympiad-amp-amp-HPU-SummerCamp-round6-B-二进制枚举/
@@ -7,4 +8,3 @@ dreamatom.top/2018/08/24/原-牛客wannaflay挑战赛22-签到题-计数器-amp-
 dreamatom.top/2018/08/23/原-洛谷P1056排座椅-简单模拟/
 dreamatom.top/2018/08/23/原-map-size-洛谷P1540-简单模拟/
 dreamatom.top/2018/08/21/原-HDU1754-I-Hate-It/
-dreamatom.top/2018/08/19/原-sublime-ubuntu-amp-amp-windows-配置-注册/
