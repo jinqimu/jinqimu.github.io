@@ -101,20 +101,7 @@
 
 
 
-<script>
-    (function () {
-        if ('') {
-            if (prompt('请输入文章密码') !== '') {
-                alert('密码错误！');
-                if (history.length === 1) {
-                    location.replace("https://dreamatom.top"); // 这里替换成你的首页
-                } else {
-                    history.back();
-                }
-            }
-        }
-    })();
-</script>
+
   <meta name="description" content="Welcome to Hexo! This is your very first post. Check documentation for more info. If you get any problems when using Hexo, you can find the answer in troubleshooting or you can ask me on GitHub. Quick">
 <meta property="og:type" content="article">
 <meta property="og:title" content="Hello World">
@@ -144,17 +131,6 @@
   };
 </script>
 
-
-<script>
-    (function(){
-        if(''){
-            if (prompt('请输入查看密码') !== ''){
-                alert('密码不正确,请询问主编大大');
-                history.back();
-            }
-        }
-    })();
-</script>
   <title>Hello World | JQM's site</title>
   
 
@@ -337,7 +313,20 @@
 
 
 
-</div>
+<script>
+    (function () {
+        if ('') {
+            if (prompt('请输入文章密码') !== '') {
+                alert('密码错误！');
+                if (history.length === 1) {
+                    location.replace("https://dreamatom.top"); // 这里替换成你的首页
+                } else {
+                    history.back();
+                }
+            }
+        }
+    })();
+</script></div>
     </header>
 
     
