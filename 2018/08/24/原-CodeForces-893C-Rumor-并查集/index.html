@@ -21,20 +21,7 @@
 <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=2">
 <meta name="theme-color" content="#222">
 
-<script>
-    (function () {
-        if ('') {
-            if (prompt('请输入文章密码') !== '') {
-                alert('密码错误！');
-                if (history.length === 1) {
-                    location.replace("https://dreamatom.top"); // 这里替换成你的首页
-                } else {
-                    history.back();
-                }
-            }
-        }
-    })();
-</script>
+
 
 
 
@@ -114,6 +101,20 @@
 
 
 
+<script>
+    (function () {
+        if ('') {
+            if (prompt('请输入文章密码') !== '') {
+                alert('密码错误！');
+                if (history.length === 1) {
+                    location.replace("https://dreamatom.top"); // 这里替换成你的首页
+                } else {
+                    history.back();
+                }
+            }
+        }
+    })();
+</script>
   <meta name="description" content="链接http://codeforces.com/problemset/problem/893/C C. Rumor time limit per test 2 seconds memory limit per test 256 megabytes input standard input output standard output Vova promised himself that he wo">
 <meta property="og:type" content="article">
 <meta property="og:title" content="[原]CodeForces - 893C Rumor  并查集">

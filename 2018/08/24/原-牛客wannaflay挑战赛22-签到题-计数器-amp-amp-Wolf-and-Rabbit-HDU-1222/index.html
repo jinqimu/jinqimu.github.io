@@ -21,20 +21,7 @@
 <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=2">
 <meta name="theme-color" content="#222">
 
-<script>
-    (function () {
-        if ('') {
-            if (prompt('请输入文章密码') !== '') {
-                alert('密码错误！');
-                if (history.length === 1) {
-                    location.replace("https://dreamatom.top"); // 这里替换成你的首页
-                } else {
-                    history.back();
-                }
-            }
-        }
-    })();
-</script>
+
 
 
 
@@ -114,6 +101,20 @@
 
 
 
+<script>
+    (function () {
+        if ('') {
+            if (prompt('请输入文章密码') !== '') {
+                alert('密码错误！');
+                if (history.length === 1) {
+                    location.replace("https://dreamatom.top"); // 这里替换成你的首页
+                } else {
+                    history.back();
+                }
+            }
+        }
+    })();
+</script>
   <meta name="description" content="这链接真特么难找 链接：https://www.nowcoder.com/acm/contest/160/A 来源：牛客网 时间限制：C/C++ 1秒，其他语言2秒 空间限制：C/C++ 262144K，其他语言524288K 64bit IO Format: %lld 题目描述有一个计数器，计数器的初始值为0，每次操作你可以把计数器的值加上a1,a2,…,an中的任意一个整数，操作次数不限（可以">
 <meta property="og:type" content="article">
 <meta property="og:title" content="[原]牛客wannaflay挑战赛22 签到题 计数器 &amp;amp;&amp;amp; Wolf and Rabbit HDU 1222">

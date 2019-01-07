@@ -21,20 +21,7 @@
 <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=2">
 <meta name="theme-color" content="#222">
 
-<script>
-    (function () {
-        if ('') {
-            if (prompt('请输入文章密码') !== '') {
-                alert('密码错误！');
-                if (history.length === 1) {
-                    location.replace("https://dreamatom.top"); // 这里替换成你的首页
-                } else {
-                    history.back();
-                }
-            }
-        }
-    })();
-</script>
+
 
 
 
@@ -114,6 +101,20 @@
 
 
 
+<script>
+    (function () {
+        if ('') {
+            if (prompt('请输入文章密码') !== '') {
+                alert('密码错误！');
+                if (history.length === 1) {
+                    location.replace("https://dreamatom.top"); // 这里替换成你的首页
+                } else {
+                    history.back();
+                }
+            }
+        }
+    })();
+</script>
   <meta name="description" content="基础二分 水题 http://poj.org/problem?id=2456 Description Farmer John has built a new long barn, with N (2 &amp;lt;= N &amp;lt;= 100,000) stalls. The stalls are located along a straight line at positions x1,…,xN (0">
 <meta property="og:type" content="article">
 <meta property="og:title" content="[原]白书模板 poj2456 Aggressive cows">
