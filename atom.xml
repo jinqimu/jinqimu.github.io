@@ -1,20 +1,42 @@
 <?xml version="1.0" encoding="utf-8"?>
 <feed xmlns="http://www.w3.org/2005/Atom">
-  <title>JQM&#39;S site</title>
+  <title>金七木的小站</title>
   
   
   <link href="//atom.xml" rel="self"/>
   
   <link href="https://dreamatom.top/"/>
-  <updated>2019-01-10T04:53:26.926Z</updated>
+  <updated>2019-01-10T15:15:23.178Z</updated>
   <id>https://dreamatom.top/</id>
   
   <author>
-    <name>jinqimu</name>
+    <name>金七木</name>
     
   </author>
   
   <generator uri="http://hexo.io/">Hexo</generator>
+  
+  <entry>
+    <title>概率论与数理统计_复习</title>
+    <link href="https://dreamatom.top/2019/01/10/%E6%A6%82%E7%8E%87%E8%AE%BA%E4%B8%8E%E6%95%B0%E7%90%86%E7%BB%9F%E8%AE%A1-%E5%A4%8D%E4%B9%A0/"/>
+    <id>https://dreamatom.top/2019/01/10/概率论与数理统计-复习/</id>
+    <published>2019-01-10T10:33:49.000Z</published>
+    <updated>2019-01-10T15:15:23.178Z</updated>
+    
+    <summary type="html">
+    
+      
+      
+        
+        
+          &lt;h1 id=&quot;第一章-随机事件及其概率&quot;&gt;&lt;a href=&quot;#第一章-随机事件及其概率&quot; class=&quot;headerlink&quot; title=&quot;第一章 随机事件及其概率&quot;&gt;&lt;/a&gt;第一章 随机事件及其概率&lt;/h1&gt;&lt;h2 id=&quot;随机试验和样本空间&quot;&gt;&lt;a
+        
+      
+    
+    </summary>
+    
+    
+  </entry>
   
   <entry>
     <title>V2Ray</title>

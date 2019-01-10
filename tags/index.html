@@ -110,7 +110,7 @@
 <meta property="og:type" content="website">
 <meta property="og:title" content="tags">
 <meta property="og:url" content="https://dreamatom.top/tags/index.html">
-<meta property="og:site_name" content="JQM&#39;S site">
+<meta property="og:site_name" content="金七木的小站">
 <meta property="og:description" content="潘岳陆机赋何在？长江自水天下流。">
 <meta property="og:locale" content="zh-CN">
 <meta property="og:updated_time" content="2019-01-05T19:53:18.000Z">
@@ -120,7 +120,7 @@
 
 
 
-  <link rel="alternate" href="/atom.xml" title="JQM'S site" type="application/atom+xml">
+  <link rel="alternate" href="/atom.xml" title="金七木的小站" type="application/atom+xml">
 
 
 
@@ -135,7 +135,7 @@
   };
 </script>
 
-  <title>tags | JQM'S site</title>
+  <title>tags | 金七木的小站</title>
   
 
 
@@ -202,7 +202,7 @@
     <div class="custom-logo-site-title">
       <a href="/" class="brand" rel="start">
         <span class="logo-line-before"><i></i></span>
-        <span class="site-title">JQM'S site</span>
+        <span class="site-title">金七木的小站</span>
         <span class="logo-line-after"><i></i></span>
       </a>
     </div>
@@ -435,6 +435,13 @@
           
 
   
+    <div class="comments" id="comments">
+      
+        <div id="gitment-container"></div>
+      
+    </div>
+
+  
 
 
 
@@ -464,9 +471,9 @@
         <div class="site-overview">
           <div class="site-author motion-element" itemprop="author" itemscope="" itemtype="http://schema.org/Person">
             
-              <img class="site-author-image" itemprop="image" src="/images/avatar.png" alt="jinqimu">
+              <img class="site-author-image" itemprop="image" src="/images/avatar.png" alt="金七木">
             
-              <p class="site-author-name" itemprop="name">jinqimu</p>
+              <p class="site-author-name" itemprop="name">金七木</p>
               <p class="site-description motion-element" itemprop="description">潘岳陆机赋何在？长江自水天下流。</p>
           </div>
 
@@ -477,7 +484,7 @@
                 
                   <a href="/archives/">
                 
-                    <span class="site-state-item-count">17</span>
+                    <span class="site-state-item-count">18</span>
                     <span class="site-state-item-name">日志</span>
                   </a>
                 </div>
@@ -568,7 +575,7 @@
   <span class="with-love" id="animate">
     <i class="fa fa-user"></i>
   </span>
-  <span class="author" itemprop="copyrightHolder">jinqimu</span>
+  <span class="author" itemprop="copyrightHolder">金七木</span>
 
   
 
@@ -680,6 +687,41 @@
 
 
   
+  
+  	<!-- LOCAL: You can save these files to your site and update links -->
+
+  
+  <link rel="stylesheet" href="https://aimingoo.github.io/gitmint/style/default.css">
+  <script src="https://aimingoo.github.io/gitmint/dist/gitmint.browser.js"></script>
+
+<!-- END LOCAL -->
+
+
+
+<script>
+  function renderGitment() {
+    var gitment = new Gitmint({
+      id: window.location.pathname,
+      owner: 'jinqimu',
+      repo: 'gitment-comments',
+      
+      lang: '' || navigator.language || navigator.systemLanguage || navigator.userLanguage,
+      
+      oauth: {
+      
+      
+        client_secret: '2bd664e3e0b495bd315f4c117b01a57799fd2eb4',
+      
+        client_id: 'e7996f71581d2dbeaafd'
+      }});
+    gitment.render('gitment-container');
+  }
+
+  
+    renderGitment();
+  
+</script>
+
   
 
 
