@@ -461,7 +461,7 @@
                   <i class="fa fa-comment-o"></i>
                 </span>
                 <a href="/2018/08/24/原-牛客wannaflay挑战赛22-签到题-计数器-amp-amp-Wolf-and-Rabbit-HDU-1222/#comments" itemprop="discussionUrl">
-                  <span class="post-meta-item-text">评论数：</span> <span class="post-comments-count gitment-comments-count" data-xid="/2018/08/24/原-牛客wannaflay挑战赛22-签到题-计数器-amp-amp-Wolf-and-Rabbit-HDU-1222/" itemprop="commentsCount"></span>
+                  <span class="post-meta-item-text">评论数：</span> <span class="post-comments-count valine-comment-count" data-xid="/2018/08/24/原-牛客wannaflay挑战赛22-签到题-计数器-amp-amp-Wolf-and-Rabbit-HDU-1222/" itemprop="commentCount"></span>
                 </a>
               </span>
             
@@ -670,9 +670,6 @@ int main()
 
   
     <div class="comments" id="comments">
-      
-        <div id="gitment-container"></div>
-      
     </div>
 
   
@@ -948,38 +945,34 @@ int main()
 
   
   
-  	<!-- LOCAL: You can save these files to your site and update links -->
+  	
+
+<script src="//cdn1.lncld.net/static/js/3.11.1/av-min.js"></script>
+
+
 
   
-  <link rel="stylesheet" href="https://aimingoo.github.io/gitmint/style/default.css">
-  <script src="https://aimingoo.github.io/gitmint/dist/gitmint.browser.js"></script>
 
-<!-- END LOCAL -->
-
-
+<script src="//cdn.jsdelivr.net/npm/valine@1/dist/Valine.min.js"></script>
 
 <script>
-  function renderGitment() {
-    var gitment = new Gitmint({
-      id: window.location.pathname,
-      owner: 'jinqimu',
-      repo: 'gitment-comments',
-      
-      lang: '' || navigator.language || navigator.systemLanguage || navigator.userLanguage,
-      
-      oauth: {
-      
-      
-        client_secret: '2bd664e3e0b495bd315f4c117b01a57799fd2eb4',
-      
-        client_id: 'e7996f71581d2dbeaafd'
-      }});
-    gitment.render('gitment-container');
-  }
-
-  
-    renderGitment();
-  
+  var GUEST = ['nick', 'mail', 'link'];
+  var guest = 'nick,mail,link';
+  guest = guest.split(',').filter(function (item) {
+    return GUEST.indexOf(item) > -1;
+  });
+  new Valine({
+    el: '#comments',
+    verify: false,
+    notify: false,
+    appId: 'tMTiUBrT5HixV6u4pcBqkP4T-gzGzoHsz',
+    appKey: '3wB8WIwNu1Non7iB6BOcc1z9',
+    placeholder: 'Just go go',
+    avatar: 'mm',
+    meta: guest,
+    pageSize: '10' || 10,
+    visitor: false
+  });
 </script>
 
   
