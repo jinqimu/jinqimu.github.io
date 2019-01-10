@@ -1,0 +1,402 @@
+<?xml version="1.0" encoding="utf-8"?>
+<feed xmlns="http://www.w3.org/2005/Atom">
+  <title>金七木的小站</title>
+  
+  
+  <link href="//atom.xml" rel="self"/>
+  
+  <link href="https://dreamatom.top/"/>
+  <updated>2019-01-10T04:53:26.926Z</updated>
+  <id>https://dreamatom.top/</id>
+  
+  <author>
+    <name>jinqimu</name>
+    
+  </author>
+  
+  <generator uri="http://hexo.io/">Hexo</generator>
+  
+  <entry>
+    <title>V2Ray</title>
+    <link href="https://dreamatom.top/2019/01/07/V2Ray/"/>
+    <id>https://dreamatom.top/2019/01/07/V2Ray/</id>
+    <published>2019-01-07T09:40:40.000Z</published>
+    <updated>2019-01-10T04:53:26.926Z</updated>
+    
+    <summary type="html">
+    
+      
+      
+        
+        
+          &lt;p&gt;&lt;strong&gt;默认配置文件&lt;/strong&gt;（不是我的）&lt;/p&gt;
+&lt;figure class=&quot;highlight&quot;&gt;&lt;table&gt;&lt;tr&gt;&lt;td class=&quot;gutter&quot;&gt;&lt;pre&gt;&lt;span class=&quot;line&quot;&gt;1&lt;/span&gt;&lt;br&gt;&lt;span
+        
+      
+    
+    </summary>
+    
+    
+  </entry>
+  
+  <entry>
+    <title>西方经济学_宏观</title>
+    <link href="https://dreamatom.top/2019/01/06/%E8%A5%BF%E6%96%B9%E7%BB%8F%E6%B5%8E%E5%AD%A6-%E5%AE%8F%E8%A7%82/"/>
+    <id>https://dreamatom.top/2019/01/06/西方经济学-宏观/</id>
+    <published>2019-01-06T01:41:28.000Z</published>
+    <updated>2019-01-07T06:07:31.588Z</updated>
+    
+    <summary type="html">
+    
+      
+      
+        
+        
+          &lt;h1 id=&quot;宏观经济的基本指标及其衡量&quot;&gt;&lt;a href=&quot;#宏观经济的基本指标及其衡量&quot; class=&quot;headerlink&quot; title=&quot;宏观经济的基本指标及其衡量&quot;&gt;&lt;/a&gt;宏观经济的基本指标及其衡量&lt;/h1&gt;&lt;h2 id=&quot;GDP的定义&quot;&gt;&lt;a
+        
+      
+    
+    </summary>
+    
+    
+  </entry>
+  
+  <entry>
+    <title>[原]HPU lib 河南理工大学图书馆 已借书籍爬取 Python</title>
+    <link href="https://dreamatom.top/2018/08/30/%E5%8E%9F-HPU-lib-%E6%B2%B3%E5%8D%97%E7%90%86%E5%B7%A5%E5%A4%A7%E5%AD%A6%E5%9B%BE%E4%B9%A6%E9%A6%86-%E5%B7%B2%E5%80%9F%E4%B9%A6%E7%B1%8D%E7%88%AC%E5%8F%96-Python/"/>
+    <id>https://dreamatom.top/2018/08/30/原-HPU-lib-河南理工大学图书馆-已借书籍爬取-Python/</id>
+    <published>2018-08-30T13:12:51.000Z</published>
+    <updated>2019-01-06T07:44:09.793Z</updated>
+    
+    <summary type="html">
+    
+      
+      
+        
+        
+          &lt;p&gt;看了下我们学校图书馆，顺手爬个已借书籍&lt;/p&gt;
+&lt;p&gt;一开始把学校想得没那么简单，尝试模拟登录，提交表单里面出现了一堆奇奇怪怪的东西，查了一下发现是.net生成的，又花了一会时间去抓这个参数&lt;/p&gt;
+&lt;p&gt;&lt;img
+        
+      
+    
+    </summary>
+    
+    
+  </entry>
+  
+  <entry>
+    <title>[原]codeforces round #306 div2 B Preparing Olympiad &amp;amp;&amp;amp; HPU SummerCamp round6 B 二进制枚举</title>
+    <link href="https://dreamatom.top/2018/08/28/%E5%8E%9F-codeforces-round-306-div2-B-Preparing-Olympiad-amp-amp-HPU-SummerCamp-round6-B-%E4%BA%8C%E8%BF%9B%E5%88%B6%E6%9E%9A%E4%B8%BE/"/>
+    <id>https://dreamatom.top/2018/08/28/原-codeforces-round-306-div2-B-Preparing-Olympiad-amp-amp-HPU-SummerCamp-round6-B-二进制枚举/</id>
+    <published>2018-08-28T11:09:15.000Z</published>
+    <updated>2019-01-05T19:39:26.000Z</updated>
+    
+    <summary type="html">
+    
+      
+      
+        
+        
+          &lt;h3 id=&quot;被隔壁oi爷暴打的一场校内赛，这道水题没做出来&quot;&gt;&lt;a href=&quot;#被隔壁oi爷暴打的一场校内赛，这道水题没做出来&quot; class=&quot;headerlink&quot;
+        
+      
+    
+    </summary>
+    
+    
+  </entry>
+  
+  <entry>
+    <title>[原]牛客练习赛25 A 签到题 因数个数和</title>
+    <link href="https://dreamatom.top/2018/08/24/%E5%8E%9F-%E7%89%9B%E5%AE%A2%E7%BB%83%E4%B9%A0%E8%B5%9B25-A-%E7%AD%BE%E5%88%B0%E9%A2%98-%E5%9B%A0%E6%95%B0%E4%B8%AA%E6%95%B0%E5%92%8C/"/>
+    <id>https://dreamatom.top/2018/08/24/原-牛客练习赛25-A-签到题-因数个数和/</id>
+    <published>2018-08-24T14:34:17.000Z</published>
+    <updated>2019-01-05T19:39:26.000Z</updated>
+    
+    <summary type="html">
+    
+      
+      
+        
+        
+          &lt;p&gt;链接：&lt;a href=&quot;https://www.nowcoder.com/acm/contest/158/A&quot; target=&quot;_blank&quot;
+        
+      
+    
+    </summary>
+    
+    
+  </entry>
+  
+  <entry>
+    <title>[原]CodeForces - 893C Rumor  并查集</title>
+    <link href="https://dreamatom.top/2018/08/24/%E5%8E%9F-CodeForces-893C-Rumor-%E5%B9%B6%E6%9F%A5%E9%9B%86/"/>
+    <id>https://dreamatom.top/2018/08/24/原-CodeForces-893C-Rumor-并查集/</id>
+    <published>2018-08-24T07:40:20.000Z</published>
+    <updated>2019-01-05T19:39:26.000Z</updated>
+    
+    <summary type="html">
+    
+      
+      
+        
+        
+          &lt;p&gt;链接&lt;a href=&quot;http://codeforces.com/problemset/problem/893/C&quot; target=&quot;_blank&quot;
+        
+      
+    
+    </summary>
+    
+    
+  </entry>
+  
+  <entry>
+    <title>[原]牛客wannaflay挑战赛22 签到题 计数器 &amp;amp;&amp;amp; Wolf and Rabbit HDU 1222</title>
+    <link href="https://dreamatom.top/2018/08/24/%E5%8E%9F-%E7%89%9B%E5%AE%A2wannaflay%E6%8C%91%E6%88%98%E8%B5%9B22-%E7%AD%BE%E5%88%B0%E9%A2%98-%E8%AE%A1%E6%95%B0%E5%99%A8-amp-amp-Wolf-and-Rabbit-HDU-1222/"/>
+    <id>https://dreamatom.top/2018/08/24/原-牛客wannaflay挑战赛22-签到题-计数器-amp-amp-Wolf-and-Rabbit-HDU-1222/</id>
+    <published>2018-08-24T00:23:58.000Z</published>
+    <updated>2019-01-05T19:39:26.000Z</updated>
+    
+    <summary type="html">
+    
+      
+      
+        
+        
+          &lt;p&gt;这链接真特么难找&lt;/p&gt;
+&lt;p&gt;链接：&lt;a href=&quot;https://www.nowcoder.com/acm/contest/160/A&quot; target=&quot;_blank&quot;
+        
+      
+    
+    </summary>
+    
+    
+  </entry>
+  
+  <entry>
+    <title>[原]洛谷P1056排座椅 简单模拟</title>
+    <link href="https://dreamatom.top/2018/08/23/%E5%8E%9F-%E6%B4%9B%E8%B0%B7P1056%E6%8E%92%E5%BA%A7%E6%A4%85-%E7%AE%80%E5%8D%95%E6%A8%A1%E6%8B%9F/"/>
+    <id>https://dreamatom.top/2018/08/23/原-洛谷P1056排座椅-简单模拟/</id>
+    <published>2018-08-23T06:25:48.000Z</published>
+    <updated>2019-01-05T19:39:26.000Z</updated>
+    
+    <summary type="html">
+    
+      
+      
+        
+        
+          &lt;h2 id=&quot;题目描述&quot;&gt;&lt;a href=&quot;#题目描述&quot; class=&quot;headerlink&quot;
+        
+      
+    
+    </summary>
+    
+    
+  </entry>
+  
+  <entry>
+    <title>[原]map.size() 洛谷P1540 简单模拟</title>
+    <link href="https://dreamatom.top/2018/08/23/%E5%8E%9F-map-size-%E6%B4%9B%E8%B0%B7P1540-%E7%AE%80%E5%8D%95%E6%A8%A1%E6%8B%9F/"/>
+    <id>https://dreamatom.top/2018/08/23/原-map-size-洛谷P1540-简单模拟/</id>
+    <published>2018-08-23T01:32:22.000Z</published>
+    <updated>2019-01-05T19:39:26.000Z</updated>
+    
+    <summary type="html">
+    
+      
+      
+        
+        
+          &lt;h2 id=&quot;题目背景&quot;&gt;&lt;a href=&quot;#题目背景&quot; class=&quot;headerlink&quot; title=&quot;题目背景&quot;&gt;&lt;/a&gt;题目背景&lt;/h2&gt;&lt;p&gt;小晨的电脑上安装了一个机器翻译软件，他经常用这个软件来翻译英语文章。&lt;/p&gt;
+&lt;h2 id=&quot;题目描述&quot;&gt;&lt;a
+        
+      
+    
+    </summary>
+    
+    
+  </entry>
+  
+  <entry>
+    <title>[原]HDU1754 I Hate It</title>
+    <link href="https://dreamatom.top/2018/08/21/%E5%8E%9F-HDU1754-I-Hate-It/"/>
+    <id>https://dreamatom.top/2018/08/21/原-HDU1754-I-Hate-It/</id>
+    <published>2018-08-21T08:24:45.000Z</published>
+    <updated>2019-01-05T19:39:26.000Z</updated>
+    
+    <summary type="html">
+    
+      
+      
+        
+        
+          &lt;p&gt;链接&lt;a href=&quot;http://acm.hdu.edu.cn/showproblem.php?pid=1754&quot; target=&quot;_blank&quot;
+        
+      
+    
+    </summary>
+    
+    
+  </entry>
+  
+  <entry>
+    <title>[原]sublime ubuntu &amp;amp;&amp;amp; windows 配置 注册</title>
+    <link href="https://dreamatom.top/2018/08/19/%E5%8E%9F-sublime-ubuntu-amp-amp-windows-%E9%85%8D%E7%BD%AE-%E6%B3%A8%E5%86%8C/"/>
+    <id>https://dreamatom.top/2018/08/19/原-sublime-ubuntu-amp-amp-windows-配置-注册/</id>
+    <published>2018-08-19T05:03:55.000Z</published>
+    <updated>2019-01-05T19:39:26.000Z</updated>
+    
+    <summary type="html">
+    
+      
+      
+        
+        
+          &lt;pre class=&quot;has&quot;&gt;
+`{
+&quot;cmd&quot; : [&quot;gnome-terminal -x bash -c \&quot;g++ $file_name -o ${file_base_name} -lm -Wall; ./${file_base_name}; exec
+        
+      
+    
+    </summary>
+    
+    
+  </entry>
+  
+  <entry>
+    <title>[原]KMP hdu1686 poj3461 Oulipo</title>
+    <link href="https://dreamatom.top/2018/08/18/%E5%8E%9F-KMP-hdu1686-poj3461-Oulipo/"/>
+    <id>https://dreamatom.top/2018/08/18/原-KMP-hdu1686-poj3461-Oulipo/</id>
+    <published>2018-08-18T03:03:40.000Z</published>
+    <updated>2019-01-05T19:39:26.000Z</updated>
+    
+    <summary type="html">
+    
+      
+      
+        
+        
+          &lt;p&gt;链接 poj&lt;a href=&quot;http://poj.org/problem?id=3461&quot; target=&quot;_blank&quot; rel=&quot;noopener&quot;&gt;http://poj.org/problem?id=3461&lt;/a&gt;&lt;/p&gt;
+&lt;p&gt;hdu&lt;a
+        
+      
+    
+    </summary>
+    
+    
+  </entry>
+  
+  <entry>
+    <title>[原]小猪佩奇身上纹</title>
+    <link href="https://dreamatom.top/2018/08/17/%E5%8E%9F-%E5%B0%8F%E7%8C%AA%E4%BD%A9%E5%A5%87%E8%BA%AB%E4%B8%8A%E7%BA%B9/"/>
+    <id>https://dreamatom.top/2018/08/17/原-小猪佩奇身上纹/</id>
+    <published>2018-08-17T11:41:12.000Z</published>
+    <updated>2019-01-05T19:39:26.000Z</updated>
+    
+    <summary type="html">
+    
+      
+      
+        
+        
+          &lt;p&gt;更新一下效果图 2018-08-30&lt;/p&gt;
+&lt;p&gt;&lt;img
+        
+      
+    
+    </summary>
+    
+    
+  </entry>
+  
+  <entry>
+    <title>[原]白书模板 poj2456 Aggressive cows</title>
+    <link href="https://dreamatom.top/2018/08/17/%E5%8E%9F-%E7%99%BD%E4%B9%A6%E6%A8%A1%E6%9D%BF-poj2456-Aggressive-cows/"/>
+    <id>https://dreamatom.top/2018/08/17/原-白书模板-poj2456-Aggressive-cows/</id>
+    <published>2018-08-17T11:21:59.000Z</published>
+    <updated>2019-01-05T19:39:26.000Z</updated>
+    
+    <summary type="html">
+    
+      
+      
+        
+        
+          &lt;p&gt;基础二分 水题 &lt;a href=&quot;http://poj.org/problem?id=2456&quot; target=&quot;_blank&quot;
+        
+      
+    
+    </summary>
+    
+    
+  </entry>
+  
+  <entry>
+    <title>[原]poj3461 Oulipo Hash || kmp</title>
+    <link href="https://dreamatom.top/2018/08/17/%E5%8E%9F-poj3461-Oulipo-Hash-kmp/"/>
+    <id>https://dreamatom.top/2018/08/17/原-poj3461-Oulipo-Hash-kmp/</id>
+    <published>2018-08-17T11:11:30.000Z</published>
+    <updated>2019-01-05T19:39:26.000Z</updated>
+    
+    <summary type="html">
+    
+      
+      
+        
+        
+          &lt;p&gt;poj3461&lt;a href=&quot;http://poj.org/problem?id=3461&quot; target=&quot;_blank&quot;
+        
+      
+    
+    </summary>
+    
+    
+  </entry>
+  
+  <entry>
+    <title>[原]HDU1520 Anniversary party 不要超时</title>
+    <link href="https://dreamatom.top/2018/08/10/%E5%8E%9F-HDU1520-Anniversary-party-%E4%B8%8D%E8%A6%81%E8%B6%85%E6%97%B6/"/>
+    <id>https://dreamatom.top/2018/08/10/原-HDU1520-Anniversary-party-不要超时/</id>
+    <published>2018-08-10T09:42:23.000Z</published>
+    <updated>2019-01-05T19:39:26.000Z</updated>
+    
+    <summary type="html">
+    
+      
+      
+        
+        
+          &lt;p&gt;HDU1520链接:&lt;a href=&quot;http://acm.hdu.edu.cn/showproblem.php?pid=1520&quot; target=&quot;_blank&quot;
+        
+      
+    
+    </summary>
+    
+    
+  </entry>
+  
+  <entry>
+    <title>Hello World</title>
+    <link href="https://dreamatom.top/2018/01/06/hello-world/"/>
+    <id>https://dreamatom.top/2018/01/06/hello-world/</id>
+    <published>2018-01-06T01:41:28.000Z</published>
+    <updated>2019-01-06T04:45:40.000Z</updated>
+    
+    <summary type="html">
+    
+      
+      
+        
+        
+          &lt;p&gt;Welcome to &lt;a href=&quot;https://hexo.io/&quot; target=&quot;_blank&quot; rel=&quot;noopener&quot;&gt;Hexo&lt;/a&gt;! This is your very first post. Check &lt;a
+        
+      
+    
+    </summary>
+    
+    
+  </entry>
+  
+</feed>
