@@ -6,7 +6,7 @@
   <link href="//atom.xml" rel="self"/>
   
   <link href="https://dreamatom.top/"/>
-  <updated>2019-01-10T15:15:23.178Z</updated>
+  <updated>2019-01-12T10:08:56.710Z</updated>
   <id>https://dreamatom.top/</id>
   
   <author>
@@ -21,7 +21,7 @@
     <link href="https://dreamatom.top/2019/01/10/%E6%A6%82%E7%8E%87%E8%AE%BA%E4%B8%8E%E6%95%B0%E7%90%86%E7%BB%9F%E8%AE%A1-%E5%A4%8D%E4%B9%A0/"/>
     <id>https://dreamatom.top/2019/01/10/概率论与数理统计-复习/</id>
     <published>2019-01-10T10:33:49.000Z</published>
-    <updated>2019-01-10T15:15:23.178Z</updated>
+    <updated>2019-01-12T10:08:56.710Z</updated>
     
     <summary type="html">
     
@@ -268,7 +268,7 @@
     <link href="https://dreamatom.top/2018/08/19/%E5%8E%9F-sublime-ubuntu-amp-amp-windows-%E9%85%8D%E7%BD%AE-%E6%B3%A8%E5%86%8C/"/>
     <id>https://dreamatom.top/2018/08/19/原-sublime-ubuntu-amp-amp-windows-配置-注册/</id>
     <published>2018-08-19T05:03:55.000Z</published>
-    <updated>2019-01-05T19:39:26.000Z</updated>
+    <updated>2019-02-19T14:42:09.555Z</updated>
     
     <summary type="html">
     
@@ -276,9 +276,8 @@
       
         
         
-          &lt;pre class=&quot;has&quot;&gt;
-`{
-&quot;cmd&quot; : [&quot;gnome-terminal -x bash -c \&quot;g++ $file_name -o ${file_base_name} -lm -Wall; ./${file_base_name}; exec
+          &lt;p&gt;Windows&lt;/p&gt;
+&lt;figure class=&quot;highlight xml&quot;&gt;&lt;table&gt;&lt;tr&gt;&lt;td class=&quot;gutter&quot;&gt;&lt;pre&gt;&lt;span class=&quot;line&quot;&gt;1&lt;/span&gt;&lt;br&gt;&lt;span
         
       
     
