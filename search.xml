@@ -1,6 +1,19 @@
 <?xml version="1.0" encoding="utf-8"?>
 <search>
   <entry>
+    <title><![CDATA[关于hexo博客]]></title>
+    <url>%2F2019%2F02%2F20%2F%E5%85%B3%E4%BA%8Ehexo%E5%8D%9A%E5%AE%A2%2F</url>
+    <content type="text"><![CDATA[关于hexo的文章网上已经很多了，我这里也不想再写 主要放3个bat 本地调试12@echo offhexo clean &amp;&amp; hexo s 上传12@echo offhexo clean &amp;&amp; hexo d &amp;&amp; pause 新文章123@echo offset /p t=title: hexo new %t% 保存为.bat放在hexo主目录即可]]></content>
+  </entry>
+  <entry>
+    <title><![CDATA[Java_从入门到北大(青鸟)]]></title>
+    <url>%2F2019%2F02%2F20%2FJava-%E4%BB%8E%E5%85%A5%E9%97%A8%E5%88%B0%E5%8C%97%E5%A4%A7-%E9%9D%92%E9%B8%9F%2F</url>
+    <content type="text"><![CDATA[1 安装JDK安装包下载不便，建议到pc.qq.com下载安装包 安装时尽量不要使目录中带有空格 2.1 一个简单的Java程序]]></content>
+      <tags>
+        <tag>Java</tag>
+      </tags>
+  </entry>
+  <entry>
     <title><![CDATA[概率论与数理统计_复习]]></title>
     <url>%2F2019%2F01%2F10%2F%E6%A6%82%E7%8E%87%E8%AE%BA%E4%B8%8E%E6%95%B0%E7%90%86%E7%BB%9F%E8%AE%A1-%E5%A4%8D%E4%B9%A0%2F</url>
     <content type="text"><![CDATA[第一章 随机事件及其概率随机试验和样本空间 随机试验（实验）E 相同条件下重复进行 结果不止一个，事先明确却所有可能结果 试验前不能明确哪一个结果出现 样本空间 样本空间Ω 随机试验的一切可能结果组成的集合， 样本点ω 样本空间的元素，即E的每个结果 随机事件 随机事件（事件） 试验E的样本空间Ω的自己为E的随机事件 由一个样本点组成的单电机，称为基本事件 事件间的关系与运算 包含关系 相等关系 和事件 至少一个发生 积事件 同时发生 互不相认事件 不能同时发生 差事件 A-B = {} 随机变量 离散型随机变量 二项分布 泊松分布 几何分布 （柯西分布） 连续型随机变量 平均分布 指数分布 正态分布]]></content>
