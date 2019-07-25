@@ -1,6 +1,19 @@
 <?xml version="1.0" encoding="utf-8"?>
 <search>
   <entry>
+    <title><![CDATA[算法模板]]></title>
+    <url>%2F2019%2F07%2F24%2F%E7%AE%97%E6%B3%95%E6%A8%A1%E6%9D%BF%2F</url>
+    <content type="text"><![CDATA[算法模板主席树(第k小)12345678910111213141516171819202122232425262728293031323334353637383940414243444546474849505152535455565758596061626364656667686970717273747576777879808182838485#include &lt;iostream&gt;#include &lt;cstdio&gt;#include &lt;cstring&gt;#include &lt;algorithm&gt;using namespace std;const int maxn=100001;struct Node&#123; int ls,rs; int cnt;&#125;tr[maxn*20];int cur,rt[maxn];void init()&#123; cur=0;&#125;inline void push_up(int o)&#123; tr[o].cnt=tr[tr[o].ls].cnt+tr[tr[o].rs].cnt;&#125;int build(int l,int r)&#123; int k=cur++; if (l==r) &#123; tr[k].cnt=0; return k; &#125; int mid=(l+r)&gt;&gt;1; tr[k].ls=build(l,mid); tr[k].rs=build(mid+1,r); push_up(k); return k;&#125;int update(int o,int l,int r,int pos,int val)&#123; int k=cur++; tr[k]=tr[o]; if (l==pos&amp;&amp;r==pos)&#123; tr[k].cnt+=val; return k; &#125; int mid=(l+r)&gt;&gt;1; if (pos&lt;=mid) tr[k].ls=update(tr[o].ls,l,mid,pos,val); else tr[k].rs=update(tr[o].rs,mid+1,r,pos,val); push_up(k); return k;&#125;int query(int l,int r,int o,int v,int kth)&#123; if (l==r) return l; int mid=(l+r)&gt;&gt;1; int res=tr[tr[v].ls].cnt-tr[tr[o].ls].cnt; if (kth&lt;=res) return query(l,mid,tr[o].ls,tr[v].ls,kth); else return query(mid+1,r,tr[o].rs,tr[v].rs,kth-res);&#125;int b[maxn];int sortb[maxn];int main()&#123; int n,m; int T; while (~scanf("%d%d",&amp;n,&amp;m))&#123; init(); for (int i=1;i&lt;=n;i++)&#123; scanf("%d",&amp;b[i]); sortb[i]=b[i]; &#125; sort(sortb+1,sortb+1+n); // int cnt=1; // for (int i=2;i&lt;=n;i++)&#123; // if (sortb[i]!=sortb[cnt])&#123; // sortb[++cnt]=sortb[i]; // &#125; // &#125; int cnt = unique(sortb+1, sortb+n+1)-(sortb+1); //去重后元素个数 rt[0]=build(1,cnt); for (int i=1;i&lt;=n;i++)&#123; int p=lower_bound(sortb+1,sortb+cnt+1,b[i])-sortb; rt[i]=update(rt[i-1],1,cnt,p,1); &#125; for (int i=0;i&lt;m;i++)&#123; int a,b,k; scanf("%d%d%d",&amp;a,&amp;b,&amp;k); int idx=query(1,cnt,rt[a-1],rt[b], k); //b-a+1-k+1 printf("%d\n",sortb[idx]); &#125; &#125; return 0;&#125;// POJ 2104 K-th Number]]></content>
+  </entry>
+  <entry>
+    <title><![CDATA[编译原理2.3 程序语言的语法描述]]></title>
+    <url>%2F2019%2F05%2F14%2F%E6%96%87%E5%8C%96%E8%AF%BE%E5%AD%A6%E4%B9%A0%2F%E7%BC%96%E8%AF%91%E5%8E%9F%E7%90%86%2F%E7%BC%96%E8%AF%91%E5%8E%9F%E7%90%861%2F</url>
+    <content type="text"><![CDATA[编译原理2.3 程序语言的语法描述定义 ∑：一个有穷字母表 符号：∑上的每一个元素 符号串：∑中的符号构成的一个有穷序列 ∑*：∑上所有符号串的全体 ø：不含任何元素的空集 文法：买哦数语言的语法结构的形式规则（语法规则） 上下文无关法12345graph LRG--&gt;1.终结符号G--&gt;2.非终结符号G--&gt;3.开始符号G--&gt;4.产生式 终结]]></content>
+      <tags>
+        <tag>编译原理</tag>
+      </tags>
+  </entry>
+  <entry>
     <title><![CDATA[Tensorflow objcet_detection]]></title>
     <url>%2F2019%2F03%2F24%2FTensorflow%20objcet_detection%2F</url>
     <content type="text"><![CDATA[Tensorflow objcet_detection系统环境 操作系统：Manjaro 18.0.4 with KDE 5.56 内存：8G CPU：Intel i5-8250U GPU：NVIDIA MX150 TensorFlow：1.13 经测试，在以下环境也成功一条龙配置 操作系统：Manjaro 18.0.4 with KDE 5.56 主板：ROG STRIX Z370-H GAMING 内存：32G CPU：Intel i7-8700 GPU：NVIDIA TITAN Xp TensorFlow：1.13 前置安装 python-tensorflow_cuda jupyter-notebook protobuf tk Python库 pip install matplotlib 尝试TensorFlow1234import tensorflow as tfhello = tf.constant('Hello, TensorFlow!')sess = tf.Session()print(sess.run(hello)) 下载objcet_detection并配置github项目链接 下载到本地并解压 cd\解压文件夹 12cd /research/protoc object_detection/protos/*.proto --python_out=. 不产生信息即成功 Try Demo12cd object_detection/jupyter notebook 打开object_detection_tutorial.ipynb 先行运行一次Imports代码块 从头开始运行代码块 脱离Jupyter Notebook在本地单独运行123cd ..#进入research文件夹sudo python setup.py install https://www.cnblogs.com/ying-chease/p/10560327.html]]></content>
@@ -17,7 +30,7 @@
   </entry>
   <entry>
     <title><![CDATA[关于hexo博客]]></title>
-    <url>%2F2019%2F02%2F20%2F%E5%85%B3%E4%BA%8Ehexo%E5%8D%9A%E5%AE%A2%2F</url>
+    <url>%2F2019%2F02%2F20%2F%E6%96%87%E5%8C%96%E8%AF%BE%E5%AD%A6%E4%B9%A0%2F%E5%85%B3%E4%BA%8Ehexo%E5%8D%9A%E5%AE%A2%2F</url>
     <content type="text"><![CDATA[关于hexo的文章网上已经很多了，我这里也不想再写 主要放3个bat 本地调试12@echo offhexo clean &amp;&amp; hexo s 上传12@echo offhexo clean &amp;&amp; hexo d &amp;&amp; pause 新文章123@echo offset /p t=title: hexo new %t% 保存为.bat放在hexo主目录即可]]></content>
   </entry>
   <entry>
@@ -32,7 +45,7 @@
   </entry>
   <entry>
     <title><![CDATA[西方经济学_宏观]]></title>
-    <url>%2F2019%2F01%2F06%2F%E8%A5%BF%E6%96%B9%E7%BB%8F%E6%B5%8E%E5%AD%A6-%E5%AE%8F%E8%A7%82%2F</url>
+    <url>%2F2019%2F01%2F06%2F%E6%96%87%E5%8C%96%E8%AF%BE%E5%AD%A6%E4%B9%A0%2F%E8%A5%BF%E6%96%B9%E7%BB%8F%E6%B5%8E%E5%AD%A6-%E5%AE%8F%E8%A7%82%2F</url>
     <content type="text"><![CDATA[宏观经济的基本指标及其衡量GDP的定义 国内生产总值是指经济社会（即一国或一地区）在一定时期内运用生产要素所生产的全部最终产品（产品和劳务）的市场价值 按地域划分 GNP的定义 国民生产总值是一个国家（或地区）所有常住单位在一定时期（通常为一年）内收入初次分配的最终结果。是一定时期内本国的生产要素所有者所占有的最终产品和服务的总价值。等于国内生产总值加上来自国内外的净要素收入。 按国籍划分 消费、投资等包含的内容国民收入的其他衡量指标 国内生产总值（GDP） 国内生产净值（NDP） 国民收入（NI） 个人收入（PI） 个人可支配收入（DPI） 各部门储蓄-投资恒等式 两部门 C+I = Y = C+S 三部门 Y = C+I+G 四部门 Y = C+I+G+(X-M) 国民收入的决定：收入——支出 模型 均衡产出 和总需求相等的产出成为均衡产出或收入 y = c+i 也就是经济社会的收入正好等于全体居民和企业想要有的支出 消费倾向 消费函数（消费倾向）：随着收入的战甲，消费也会增加，但是消费的增加不及收入的增加多 边际消费倾向（MPC）：增加的消费与最佳的收入之比率 MPC = dc/dy 平均消费倾向（APC）：任一收入水平上消费支出在收入中的比率 凯恩斯消费理论 消费函数 边际消费倾向递减，如果消费和收入之间存在线性关系，则边际消费倾向为一常数，这时消费函数表示为C=α+β 储蓄函数 s = y-c = y-(α+β)y = -α+(1-β)y 乘数 两部门经济中收入决定 消费函数决定收入 由于 y = c+i（收入恒等式） c = α+βy（消费函数） 联立得到 y = (α+i)/(1-β)（均衡收入） 可见，如果知道了消费函数和投资量，就可以得到均衡的国民收入 储蓄函数决定收入 由于 i = s = y-c（投资等于储蓄） s = -α+(1-β)y（储蓄函数） 联立得到 y = (α+i)/(1-β)（均衡收入） 乘数论 投资乘数指收入的变化与带来这种变化的投资支出的变化的比率 三部门经济中的各种乘数及其局限性 收入决定（三部门宏观均衡） i+g = s+t 乘数 y = (α+i+g-βt)/(1-β) IS-LM模型 IS曲线 I=e-dr 斜率绝对值 d对IS曲线的影响 β对IS曲线的影响 LM曲线 公式 定义 曲线图 斜率 &amp; h 产品市场和货币市场的一般均衡 AD-AS模型 总需求曲线为什么是向右下倾斜（三种效应） 利率效应 价格水平上升是，实际货币供给下降，货币供给小于货币需求，导致利率上升，投资下降，总需求量减少 实际越效应 价格总水平上升是，资产实际价值下降，人们实际拥有的财富减少，人们的消费水平下降 税收效应 价格总水平上升是，人们的名义收入水平增加，会使人们进入更高的纳税等级，从而增加人们的税收负担，减少可支配收入，进而减少消费 失业与通货膨胀三种失业类型 摩擦性失业 由于一些原因，工人在工作搜寻过程中所引起的失业 结构性失业 劳动力的供给和需求不匹配（又有失业，又有职位空缺） 周期性失业（非重点） 整体经济的支出和产出水平下架，即经济的需求下降而造成的失业 通货膨胀 作为货币现象的通货膨胀 货币数量论交易方程：Py=MV M为货币供给量；V为货币流通速度；P为价格水平：y为实际收入水平 Π = m-y+v Π为通货膨胀率；m为货币增长率；y为产品增长率；v为货币流通速度变化率 需求拉动的通货膨胀（瓶颈现象） 成本推动的通货膨胀 指在没有超额需求的情况下由于供给方面成本提高所引起的一般价格水平持续和显著上涨 工资-价格螺旋 结构性通货膨胀（经济结构因素影响） 通货膨胀的成本 预期到的通货膨胀 菜单成本 调整价格的成本 鞋底成本 往返银行路上所画的时间和汽油钱等开支 税收扭曲 相对价格变动导致的资源配置不当 混乱与不方便 未预期到的通货膨胀成本 不确定性的增加 不合意的财富的再分配 相对价格变动性的增加 通货膨胀的影响 不利于固定收入 倾向于储蓄人 不利于债权人 有利于债务人 菲利普斯曲线的短期效果 u与Π成相反关系 总需求低 低通货膨胀 高失业率 总需求高 高通货膨胀 低失业率 菲利普斯曲线的长期表现 垂直于自然失业率水平的长期菲利普斯曲线表明，在长期中，不存在失业与通货膨胀的替换关系 宏观经济政策财政政策及货币政策的定义 财政政策 财政政策 是 政府变动税收和支出以便影响总需求进而影响就业和国民收入的政策 货币政策 货币政策 是 货币当局即中央银行通过银行体系变动货币供给量来调节总需求 自动稳定器的定义及其三项制度 定义 指经济系统本身存在的一种会减少各种干扰对国民收入的冲击的机制，能够在经济繁荣时期自动抑制通货膨胀，在经济衰退时期自动减轻萧条，无须政府采取任何行动 三项制度 政府税收的自动变化 政府转移支付的自动变化 农产品价格维持制度 财政政策的IS-LM图形分析 &amp; 货币政策的IS-LM图形分析 财政政策 “挤出效应”是指政府支出增加所引起的私人消费或投资降低的效果（LM曲线不变，IS曲线斜率越小，越平坦，效果越强） IS曲线不变，LM曲线斜率越大，国民收入增量越少，即政策效果越小 货币政策 LM曲线形状不变，IS曲线越平坦，LM移动的影响越大 IS曲线斜率不变，LM曲线越平坦，货币政策效果越小 财政政策的局限性 如果经济处于投资对利率高度敏感而货币需求对利率不敏感的状态，即使支出乘数很大也无法使财政政策有效 存款综合，货币创造乘数 一国之内的货币供应量，绝大部分是商业银行创造的存款货币 货币政策及其工具 特点 再贴现率政策（中央银行对其他金融机构放款利率） 公开市场业务（中央银行公开买卖政府债券以可支货币供给和利率） 变动法定准备率（增加货币供给，降低法定准备率） 调整手段 调整实际利率为主要依据和中介目标 局限性 经济衰退时期 货币流通速度不会不变 货币政策外部时滞 资金在国际上流动]]></content>
   </entry>
   <entry>

@@ -6,7 +6,7 @@
   <link href="/atom.xml" rel="self"/>
   
   <link href="https://jinqimu.github.io/"/>
-  <updated>2019-03-26T09:08:06.883Z</updated>
+  <updated>2019-07-25T05:49:30.103Z</updated>
   <id>https://jinqimu.github.io/</id>
   
   <author>
@@ -15,6 +15,50 @@
   </author>
   
   <generator uri="http://hexo.io/">Hexo</generator>
+  
+  <entry>
+    <title>算法模板</title>
+    <link href="https://jinqimu.github.io/2019/07/24/%E7%AE%97%E6%B3%95%E6%A8%A1%E6%9D%BF/"/>
+    <id>https://jinqimu.github.io/2019/07/24/算法模板/</id>
+    <published>2019-07-24T12:11:36.000Z</published>
+    <updated>2019-07-25T05:49:30.103Z</updated>
+    
+    <content type="html"><![CDATA[<h1 id="算法模板"><a href="#算法模板" class="headerlink" title="算法模板"></a>算法模板</h1><h2 id="主席树-第k小"><a href="#主席树-第k小" class="headerlink" title="主席树(第k小)"></a>主席树(第k小)</h2><figure class="highlight cpp"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br><span class="line">39</span><br><span class="line">40</span><br><span class="line">41</span><br><span class="line">42</span><br><span class="line">43</span><br><span class="line">44</span><br><span class="line">45</span><br><span class="line">46</span><br><span class="line">47</span><br><span class="line">48</span><br><span class="line">49</span><br><span class="line">50</span><br><span class="line">51</span><br><span class="line">52</span><br><span class="line">53</span><br><span class="line">54</span><br><span class="line">55</span><br><span class="line">56</span><br><span class="line">57</span><br><span class="line">58</span><br><span class="line">59</span><br><span class="line">60</span><br><span class="line">61</span><br><span class="line">62</span><br><span class="line">63</span><br><span class="line">64</span><br><span class="line">65</span><br><span class="line">66</span><br><span class="line">67</span><br><span class="line">68</span><br><span class="line">69</span><br><span class="line">70</span><br><span class="line">71</span><br><span class="line">72</span><br><span class="line">73</span><br><span class="line">74</span><br><span class="line">75</span><br><span class="line">76</span><br><span class="line">77</span><br><span class="line">78</span><br><span class="line">79</span><br><span class="line">80</span><br><span class="line">81</span><br><span class="line">82</span><br><span class="line">83</span><br><span class="line">84</span><br><span class="line">85</span><br></pre></td><td class="code"><pre><span class="line"><span class="meta">#<span class="meta-keyword">include</span> <span class="meta-string">&lt;iostream&gt;</span></span></span><br><span class="line"><span class="meta">#<span class="meta-keyword">include</span> <span class="meta-string">&lt;cstdio&gt;</span></span></span><br><span class="line"><span class="meta">#<span class="meta-keyword">include</span> <span class="meta-string">&lt;cstring&gt;</span></span></span><br><span class="line"><span class="meta">#<span class="meta-keyword">include</span> <span class="meta-string">&lt;algorithm&gt;</span></span></span><br><span class="line"><span class="keyword">using</span> <span class="keyword">namespace</span> <span class="built_in">std</span>;</span><br><span class="line"><span class="keyword">const</span> <span class="keyword">int</span> maxn=<span class="number">100001</span>;</span><br><span class="line"><span class="class"><span class="keyword">struct</span> <span class="title">Node</span>&#123;</span></span><br><span class="line">    <span class="keyword">int</span> ls,rs;</span><br><span class="line">    <span class="keyword">int</span> cnt;</span><br><span class="line">&#125;tr[maxn*<span class="number">20</span>];</span><br><span class="line"><span class="keyword">int</span> cur,rt[maxn];</span><br><span class="line"><span class="function"><span class="keyword">void</span> <span class="title">init</span><span class="params">()</span></span>&#123;</span><br><span class="line">    cur=<span class="number">0</span>;</span><br><span class="line">&#125;</span><br><span class="line"><span class="function"><span class="keyword">inline</span> <span class="keyword">void</span> <span class="title">push_up</span><span class="params">(<span class="keyword">int</span> o)</span></span>&#123;</span><br><span class="line">    tr[o].cnt=tr[tr[o].ls].cnt+tr[tr[o].rs].cnt;</span><br><span class="line">&#125;</span><br><span class="line"><span class="function"><span class="keyword">int</span> <span class="title">build</span><span class="params">(<span class="keyword">int</span> l,<span class="keyword">int</span> r)</span></span>&#123;</span><br><span class="line">    <span class="keyword">int</span> k=cur++;</span><br><span class="line">    <span class="keyword">if</span> (l==r) &#123;</span><br><span class="line">        tr[k].cnt=<span class="number">0</span>;</span><br><span class="line">        <span class="keyword">return</span> k;</span><br><span class="line">    &#125;</span><br><span class="line">    <span class="keyword">int</span> mid=(l+r)&gt;&gt;<span class="number">1</span>;</span><br><span class="line">    tr[k].ls=build(l,mid);</span><br><span class="line">    tr[k].rs=build(mid+<span class="number">1</span>,r);</span><br><span class="line">    push_up(k);</span><br><span class="line">    <span class="keyword">return</span> k;</span><br><span class="line">&#125;</span><br><span class="line"><span class="function"><span class="keyword">int</span> <span class="title">update</span><span class="params">(<span class="keyword">int</span> o,<span class="keyword">int</span> l,<span class="keyword">int</span> r,<span class="keyword">int</span> pos,<span class="keyword">int</span> val)</span></span>&#123;</span><br><span class="line">    <span class="keyword">int</span> k=cur++;</span><br><span class="line">    tr[k]=tr[o];</span><br><span class="line">    <span class="keyword">if</span> (l==pos&amp;&amp;r==pos)&#123;</span><br><span class="line">        tr[k].cnt+=val;</span><br><span class="line">        <span class="keyword">return</span> k;</span><br><span class="line">    &#125;</span><br><span class="line">    <span class="keyword">int</span> mid=(l+r)&gt;&gt;<span class="number">1</span>;</span><br><span class="line">    <span class="keyword">if</span> (pos&lt;=mid) tr[k].ls=update(tr[o].ls,l,mid,pos,val);</span><br><span class="line">    <span class="keyword">else</span> tr[k].rs=update(tr[o].rs,mid+<span class="number">1</span>,r,pos,val);</span><br><span class="line">    push_up(k);</span><br><span class="line">    <span class="keyword">return</span> k;</span><br><span class="line">&#125;</span><br><span class="line"><span class="function"><span class="keyword">int</span> <span class="title">query</span><span class="params">(<span class="keyword">int</span> l,<span class="keyword">int</span> r,<span class="keyword">int</span> o,<span class="keyword">int</span> v,<span class="keyword">int</span> kth)</span></span>&#123;</span><br><span class="line">    <span class="keyword">if</span> (l==r) <span class="keyword">return</span> l;</span><br><span class="line">    <span class="keyword">int</span> mid=(l+r)&gt;&gt;<span class="number">1</span>;</span><br><span class="line">    <span class="keyword">int</span> res=tr[tr[v].ls].cnt-tr[tr[o].ls].cnt;</span><br><span class="line">    <span class="keyword">if</span> (kth&lt;=res) <span class="keyword">return</span> query(l,mid,tr[o].ls,tr[v].ls,kth);</span><br><span class="line">    <span class="keyword">else</span> <span class="keyword">return</span> query(mid+<span class="number">1</span>,r,tr[o].rs,tr[v].rs,kth-res);</span><br><span class="line">&#125;</span><br><span class="line"><span class="keyword">int</span> b[maxn];</span><br><span class="line"><span class="keyword">int</span> sortb[maxn];</span><br><span class="line"><span class="function"><span class="keyword">int</span> <span class="title">main</span><span class="params">()</span></span></span><br><span class="line"><span class="function"></span>&#123;</span><br><span class="line">    <span class="keyword">int</span> n,m;</span><br><span class="line">    <span class="keyword">int</span> T;</span><br><span class="line">    <span class="keyword">while</span> (~<span class="built_in">scanf</span>(<span class="string">"%d%d"</span>,&amp;n,&amp;m))&#123;</span><br><span class="line">        init();</span><br><span class="line">        <span class="keyword">for</span> (<span class="keyword">int</span> i=<span class="number">1</span>;i&lt;=n;i++)&#123;</span><br><span class="line">            <span class="built_in">scanf</span>(<span class="string">"%d"</span>,&amp;b[i]);</span><br><span class="line">            sortb[i]=b[i];</span><br><span class="line">        &#125;</span><br><span class="line">        sort(sortb+<span class="number">1</span>,sortb+<span class="number">1</span>+n);</span><br><span class="line">        <span class="comment">// int cnt=1;</span></span><br><span class="line">        <span class="comment">// for (int i=2;i&lt;=n;i++)&#123;</span></span><br><span class="line">        <span class="comment">//     if (sortb[i]!=sortb[cnt])&#123;</span></span><br><span class="line">        <span class="comment">//         sortb[++cnt]=sortb[i];</span></span><br><span class="line">        <span class="comment">//     &#125;</span></span><br><span class="line">        <span class="comment">// &#125;</span></span><br><span class="line">        <span class="keyword">int</span> cnt = unique(sortb+<span class="number">1</span>, sortb+n+<span class="number">1</span>)-(sortb+<span class="number">1</span>);  <span class="comment">//去重后元素个数</span></span><br><span class="line">        rt[<span class="number">0</span>]=build(<span class="number">1</span>,cnt);</span><br><span class="line">        <span class="keyword">for</span> (<span class="keyword">int</span> i=<span class="number">1</span>;i&lt;=n;i++)&#123;</span><br><span class="line">            <span class="keyword">int</span> p=lower_bound(sortb+<span class="number">1</span>,sortb+cnt+<span class="number">1</span>,b[i])-sortb;</span><br><span class="line">            rt[i]=update(rt[i<span class="number">-1</span>],<span class="number">1</span>,cnt,p,<span class="number">1</span>);</span><br><span class="line">        &#125;</span><br><span class="line">        <span class="keyword">for</span> (<span class="keyword">int</span> i=<span class="number">0</span>;i&lt;m;i++)&#123;</span><br><span class="line">            <span class="keyword">int</span> a,b,k;</span><br><span class="line">            <span class="built_in">scanf</span>(<span class="string">"%d%d%d"</span>,&amp;a,&amp;b,&amp;k);</span><br><span class="line">            <span class="keyword">int</span> idx=query(<span class="number">1</span>,cnt,rt[a<span class="number">-1</span>],rt[b], k);    <span class="comment">//b-a+1-k+1</span></span><br><span class="line">            <span class="built_in">printf</span>(<span class="string">"%d\n"</span>,sortb[idx]);</span><br><span class="line">        &#125;</span><br><span class="line">    &#125;</span><br><span class="line">    <span class="keyword">return</span> <span class="number">0</span>;</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line"><span class="comment">// POJ 2104 K-th Number</span></span><br></pre></td></tr></table></figure>]]></content>
+    
+    <summary type="html">
+    
+      
+      
+        &lt;h1 id=&quot;算法模板&quot;&gt;&lt;a href=&quot;#算法模板&quot; class=&quot;headerlink&quot; title=&quot;算法模板&quot;&gt;&lt;/a&gt;算法模板&lt;/h1&gt;&lt;h2 id=&quot;主席树-第k小&quot;&gt;&lt;a href=&quot;#主席树-第k小&quot; class=&quot;headerlink&quot; title=&quot;主席树
+      
+    
+    </summary>
+    
+    
+  </entry>
+  
+  <entry>
+    <title>编译原理2.3 程序语言的语法描述</title>
+    <link href="https://jinqimu.github.io/2019/05/14/%E6%96%87%E5%8C%96%E8%AF%BE%E5%AD%A6%E4%B9%A0/%E7%BC%96%E8%AF%91%E5%8E%9F%E7%90%86/%E7%BC%96%E8%AF%91%E5%8E%9F%E7%90%861/"/>
+    <id>https://jinqimu.github.io/2019/05/14/文化课学习/编译原理/编译原理1/</id>
+    <published>2019-05-14T05:40:28.000Z</published>
+    <updated>2019-05-14T07:25:58.000Z</updated>
+    
+    <content type="html"><![CDATA[<h1 id="编译原理2-3-程序语言的语法描述"><a href="#编译原理2-3-程序语言的语法描述" class="headerlink" title="编译原理2.3 程序语言的语法描述"></a>编译原理2.3 程序语言的语法描述</h1><h2 id="定义"><a href="#定义" class="headerlink" title="定义"></a>定义</h2><blockquote><p>∑：一个有穷<strong>字母表</strong></p><p>符号：∑上的每一个<strong>元素</strong></p><p>符号串：∑中的符号构成的一个<strong>有穷序列</strong></p><p>∑*：∑上所有符号串的<strong>全体</strong></p><p>ø：不含任何元素的空集</p><p>文法：买哦数语言的语法结构的形式规则（语法规则）</p></blockquote><h2 id="上下文无关法"><a href="#上下文无关法" class="headerlink" title="上下文无关法"></a>上下文无关法</h2><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line">graph LR</span><br><span class="line">G--&gt;1.终结符号</span><br><span class="line">G--&gt;2.非终结符号</span><br><span class="line">G--&gt;3.开始符号</span><br><span class="line">G--&gt;4.产生式</span><br></pre></td></tr></table></figure><p>终结</p>]]></content>
+    
+    <summary type="html">
+    
+      
+      
+        &lt;h1 id=&quot;编译原理2-3-程序语言的语法描述&quot;&gt;&lt;a href=&quot;#编译原理2-3-程序语言的语法描述&quot; class=&quot;headerlink&quot; title=&quot;编译原理2.3 程序语言的语法描述&quot;&gt;&lt;/a&gt;编译原理2.3 程序语言的语法描述&lt;/h1&gt;&lt;h2 id=&quot;定义&quot;&gt;&lt;
+      
+    
+    </summary>
+    
+    
+      <category term="编译原理" scheme="https://jinqimu.github.io/tags/%E7%BC%96%E8%AF%91%E5%8E%9F%E7%90%86/"/>
+    
+  </entry>
   
   <entry>
     <title>Tensorflow objcet_detection</title>
@@ -81,8 +125,8 @@
   
   <entry>
     <title>关于hexo博客</title>
-    <link href="https://jinqimu.github.io/2019/02/20/%E5%85%B3%E4%BA%8Ehexo%E5%8D%9A%E5%AE%A2/"/>
-    <id>https://jinqimu.github.io/2019/02/20/关于hexo博客/</id>
+    <link href="https://jinqimu.github.io/2019/02/20/%E6%96%87%E5%8C%96%E8%AF%BE%E5%AD%A6%E4%B9%A0/%E5%85%B3%E4%BA%8Ehexo%E5%8D%9A%E5%AE%A2/"/>
+    <id>https://jinqimu.github.io/2019/02/20/文化课学习/关于hexo博客/</id>
     <published>2019-02-20T02:49:14.000Z</published>
     <updated>2019-02-20T04:12:42.297Z</updated>
     
@@ -147,8 +191,8 @@
   
   <entry>
     <title>西方经济学_宏观</title>
-    <link href="https://jinqimu.github.io/2019/01/06/%E8%A5%BF%E6%96%B9%E7%BB%8F%E6%B5%8E%E5%AD%A6-%E5%AE%8F%E8%A7%82/"/>
-    <id>https://jinqimu.github.io/2019/01/06/西方经济学-宏观/</id>
+    <link href="https://jinqimu.github.io/2019/01/06/%E6%96%87%E5%8C%96%E8%AF%BE%E5%AD%A6%E4%B9%A0/%E8%A5%BF%E6%96%B9%E7%BB%8F%E6%B5%8E%E5%AD%A6-%E5%AE%8F%E8%A7%82/"/>
+    <id>https://jinqimu.github.io/2019/01/06/文化课学习/西方经济学-宏观/</id>
     <published>2019-01-06T01:41:28.000Z</published>
     <updated>2019-01-07T06:07:31.588Z</updated>
     
@@ -397,50 +441,6 @@
       
         &lt;p&gt;更新一下效果图 2018-08-30&lt;/p&gt;
 &lt;p&gt;&lt;img src=&quot;https://img-blog.csdn.net/20180830230023180?watermark/2/text/aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L0pxbWp5ag==
-      
-    
-    </summary>
-    
-    
-  </entry>
-  
-  <entry>
-    <title>[原]白书模板 poj2456 Aggressive cows</title>
-    <link href="https://jinqimu.github.io/2018/08/17/%E5%8E%9F-%E7%99%BD%E4%B9%A6%E6%A8%A1%E6%9D%BF-poj2456-Aggressive-cows/"/>
-    <id>https://jinqimu.github.io/2018/08/17/原-白书模板-poj2456-Aggressive-cows/</id>
-    <published>2018-08-17T11:21:59.000Z</published>
-    <updated>2019-01-05T19:39:26.000Z</updated>
-    
-    <content type="html"><![CDATA[<p>基础二分 水题 <a href="http://poj.org/problem?id=2456" target="_blank" rel="noopener">http://poj.org/problem?id=2456</a></p><p>Description</p><p>Farmer John has built a new long barn, with N (2 &lt;= N &lt;= 100,000) stalls. The stalls are located along a straight line at positions x1,…,xN (0 &lt;= xi &lt;= 1,000,000,000). </p><p>His C (2 &lt;= C &lt;= N) cows don’t like this barn layout and become aggressive towards each other once put into a stall. To prevent the cows from hurting each other, FJ want to assign the cows to the stalls, such that the minimum distance between any two of them is as large as possible. What is the largest minimum distance?</p><p>Input</p><ul><li><p>Line 1: Two space-separated integers: N and C </p></li><li><p>Lines 2..N+1: Line i+1 contains an integer stall location, xi</p></li></ul><p>Output</p><ul><li>Line 1: One integer: the largest minimum distance</li></ul><p>Sample Input</p><pre>`5 312849`</pre><p>Sample Output</p><pre>`3`</pre><p>Hint</p><p>OUTPUT DETAILS: </p><p>FJ can put his 3 cows in the stalls at positions 1, 4 and 8, resulting in a minimum distance of 3. </p><p>Huge input data,scanf is recommended.</p><pre class="has">`#include&lt;cstdio&gt;#include&lt;cstring&gt;#include&lt;algorithm&gt;#include&lt;iostream&gt;#include&lt;cmath&gt;using namespace std;const int maxn = 1e6+10;int a[maxn];int n, c;int check(int x){    int cnt = 1;    int temp = a[0];    for(int i=1; i&lt;n; i++)    {        if(a[i]-temp&gt;=x)        {            cnt++;            temp = a[i];        }        if(cnt&gt;=c) break;    }    return cnt&gt;=c?1:0;}int main(){    int i;    while(cin&gt;&gt;n&gt;&gt;c)    {        for(i=0; i&lt;n; i++)        {            scanf("%d", &amp;a[i]);        }        sort(a, a+n);        int l=0, m, r=a[n-1]-a[0];        while(r&gt;l+1)        {            m = (l+r)/2;            if(check(m))                l = m;            else r = m;        }        cout&lt;&lt;l&lt;&lt;endl;    }    return 0;}`</pre><p>一开始输出了m，样列过了然后疯狂wa，发现取m可能超，应该用l<br>                    <div><br>                        作者：Jqmjyj 发表于 2018/08/17 19:21:59 <a href="https://blog.csdn.net/Jqmjyj/article/details/81782324" target="_blank" rel="noopener">原文链接</a> <a href="https://blog.csdn.net/Jqmjyj/article/details/81782324" target="_blank" rel="noopener">https://blog.csdn.net/Jqmjyj/article/details/81782324</a>                    </div><br>                    <div><br>                        阅读：43                     </div></p>]]></content>
-    
-    <summary type="html">
-    
-      
-      
-        &lt;p&gt;基础二分 水题 &lt;a href=&quot;http://poj.org/problem?id=2456&quot; target=&quot;_blank&quot; rel=&quot;noopener&quot;&gt;http://poj.org/problem?id=2456&lt;/a&gt;&lt;/p&gt;
-&lt;p&gt;Description&lt;/p&gt;
-      
-    
-    </summary>
-    
-    
-  </entry>
-  
-  <entry>
-    <title>[原]poj3461 Oulipo Hash || kmp</title>
-    <link href="https://jinqimu.github.io/2018/08/17/%E5%8E%9F-poj3461-Oulipo-Hash-kmp/"/>
-    <id>https://jinqimu.github.io/2018/08/17/原-poj3461-Oulipo-Hash-kmp/</id>
-    <published>2018-08-17T11:11:30.000Z</published>
-    <updated>2019-01-05T19:39:26.000Z</updated>
-    
-    <content type="html"><![CDATA[<p>poj3461<a href="http://poj.org/problem?id=3461" target="_blank" rel="noopener">http://poj.org/problem?id=3461</a></p><p><strong>hash模板题</strong></p><p>Description</p><p>The French author Georges Perec (1936–1982) once wrote a book, La disparition, without the letter ‘e’. He was a member of the Oulipo group. A quote from the book:</p><blockquote><p>Tout avait Pair normal, mais tout s’affirmait faux. Tout avait Fair normal, d’abord, puis surgissait l’inhumain, l’affolant. Il aurait voulu savoir où s’articulait l’association qui l’unissait au roman : stir son tapis, assaillant à tout instant son imagination, l’intuition d’un tabou, la vision d’un mal obscur, d’un quoi vacant, d’un non-dit : la vision, l’avision d’un oubli commandant tout, où s’abolissait la raison : tout avait l’air normal mais…</p></blockquote><p>Perec would probably have scored high (or rather, low) in the following contest. People are asked to write a perhaps even meaningful text on some subject with as few occurrences of a given “word” as possible. Our task is to provide the jury with a program that counts these occurrences, in order to obtain a ranking of the competitors. These competitors often write very long texts with nonsense meaning; a sequence of 500,000 consecutive ‘T’s is not unusual. And they never use spaces.</p><p>So we want to quickly find out how often a word, i.e., a given string, occurs in a text. More formally: given the alphabet {‘A’, ‘B’, ‘C’, …, ‘Z’} and two finite strings over that alphabet, a word _W_ and a text _T_, count the number of occurrences of _W_ in _T_. All the consecutive characters of W must exactly match consecutive characters of _T_. Occurrences may overlap.</p><p>Input</p><p>The first line of the input file contains a single number: the number of test cases to follow. Each test case has the following format:</p><ul><li>One line with the word _W_, a string over {‘A’, ‘B’, ‘C’, …, ‘Z’}, with 1 ≤ |_W_| ≤ 10,000 (here |_W_| denotes the length of the string _W_).</li><li>One line with the text _T_, a string over {‘A’, ‘B’, ‘C’, …, ‘Z’}, with |_W_| ≤ |_T_| ≤ 1,000,000.</li></ul><p>Output</p><p>For every test case in the input file, the output should contain a single number, on a single line: the number of occurrences of the word _W_in the text _T_.</p><p>Sample Input</p><pre>`3BAPCBAPCAZAAZAZAZAVERDIAVERDXIVYERDIAN`</pre><p>Sample Output</p><pre>`130`</pre><p>一开始做的时候直接用pow求得差基，忘了会爆了，笑哭</p><pre class="has">`#include&lt;cstdio&gt;#include&lt;cstring&gt;#include&lt;algorithm&gt;#include&lt;iostream&gt;#include&lt;cmath&gt;#include&lt;set&gt;using namespace std;#define maxn 1000010#define base 13333typedef unsigned long long ull;char s1[10010];char s2[maxn];ull has2[maxn];ull po[maxn];void init(){    po[0]=1;    for(int i=1; i&lt;maxn; i++)        po[i]=po[i-1]*base;}ull gethas(int i, int l, ull has0[]){    if(i==0) return has0[i+l-1];    return has0[i+l-1]-has0[i-1]*po[l];    //不能直接用pow，会爆，=-=忘了}int main(){    int t, i;    cin&gt;&gt;t;    init();    while(t--)    {        scanf("%s%s", s1, s2);        ull has1 = 0;        int len1 = strlen(s1), len2 = strlen(s2);        for(i=0; i&lt;len1; i++)            has1 = has1*base+s1[i]-'A'+1;        has2[0] = s2[0]-'A'+1;        for(i=1; i&lt;len2; i++)        {            has2[i] = has2[i-1]*base+s2[i]-'A'+1;        }        int ans = 0;        for(i=0; i&lt;len2-len1+1; i++)        {            if(s2[i]==s1[0])            {                if(gethas(i, len1, has2)==has1)                    ans++;            }        }        cout&lt;&lt;ans&lt;&lt;endl;    }    return 0;}`</pre><h3 id="用数组存差基，has0-i-l-1-has0-i-1-po-l-返回一定范围的hash进行对比"><a href="#用数组存差基，has0-i-l-1-has0-i-1-po-l-返回一定范围的hash进行对比" class="headerlink" title="用数组存差基，has0[i+l-1]-has0[i-1]*po[l]返回一定范围的hash进行对比"></a>用数组存差基，has0[i+l-1]-has0[i-1]*po[l]返回一定范围的hash进行对比</h3><h3 id="用ull直接取mod"><a href="#用ull直接取mod" class="headerlink" title="用ull直接取mod"></a>用ull直接取mod</h3><pre><code>&lt;div&gt;    作者：Jqmjyj 发表于 2018/08/17 19:11:30 [原文链接](https://blog.csdn.net/Jqmjyj/article/details/81782220) https://blog.csdn.net/Jqmjyj/article/details/81782220                    &lt;/div&gt;&lt;div&gt;    阅读：45                     &lt;/div&gt;</code></pre>]]></content>
-    
-    <summary type="html">
-    
-      
-      
-        &lt;p&gt;poj3461&lt;a href=&quot;http://poj.org/problem?id=3461&quot; target=&quot;_blank&quot; rel=&quot;noopener&quot;&gt;http://poj.org/problem?id=3461&lt;/a&gt;&lt;/p&gt;
-&lt;p&gt;&lt;strong&gt;hash模板题&lt;
       
     
     </summary>
