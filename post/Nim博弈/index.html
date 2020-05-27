@@ -1,0 +1,584 @@
+<html lang="zh-CN">
+
+<head>
+  <meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta http-equiv="X-UA-Compatible" content="ie=edge">
+<title>Nim博弈 - JQM&#39;s site</title>
+<link rel="shortcut icon" href="https://jinqimu.xyz/favicon.ico">
+<link href="https://cdn.jsdelivr.net/npm/remixicon@2.2.0/fonts/remixicon.css" rel="stylesheet">
+<!-- <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/animate.css@3.7.2/animate.min.css"> -->
+<!-- <link rel="stylesheet" href="https://jinqimu.xyz/media/css/tailwind.css"> -->
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/jinqimu/jinqimu.github.io/media/css/tailwind.css">
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/jinqimu/jinqimu.github.io/styles/main.css">
+<link rel="alternate" type="application/atom+xml" title="Nim博弈 - JQM&#39;s site - Atom Feed" href="https://jinqimu.xyz/atom.xml">
+<!-- Vssue 的样式文件 -->
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/meteorlxy/vssue/packages/vssue/dist/vssue.min.css">
+
+<meta name="google-site-verification" content="M2dMC3JHR6GqgIFxOWbHJwQPXyhSRTTzdrBGg28Ie-M" />
+<meta name="google-site-verification" content="AzaPOFn8x82yt0rrTak8Hh4lis5fOM9xw57Tyg-mw_E" />
+<meta name="baidu-site-verification" content="LObsyZAOkl" />
+
+    
+
+<style>
+  /* html {filter: grayscale(1);} */
+.markdown figure {display: block;}
+.markdown figure img {margin: 0 auto;}
+</style>
+
+
+<script src="https://apps.bdimg.com/libs/jquery/2.1.4/jquery.min.js">
+</script>
+<meta name="referrer" content="never">
+<style>
+  .post-preview{max-width:580px;height:210px;margin:1em auto;position:relative;display:flex;background:floralwhite;border-radius:4px;box-shadow:0 1px 2px rgba(0,0,0,.25),0 0 1px rgba(0,0,0,.25);}
+  .post-preview--meta{width:75%;padding:25px;overflow:hidden;}
+  .post-preview--middle {line-height:28px;}
+  .post-preview--title {font-size:18px;margin:0!important;}
+  .post-preview--title a{text-decoration:none;}
+  .post-preview--date{font-size:14px;color:#999;}
+  .post-preview--excerpt{font-size:14px;line-height:1.825;}
+  .post-preview--excerpt p{margin-bottom:0;}  
+  .post-preview--image {height:210px!important;width:auto;float:right;border-top-right-radius: 2px!important;border-bottom-right-radius:2px!important;border-top-left-radius:0!important;border-bottom-left-radius:0!important;}
+  @media (max-width:550px) {.post-preview {width:95%;height: 180px;}.post-preview--image{height: 180px!important;}.post-preview--excerpt{display:none;}/*.post-preview--middle {line-height:19px;}*/}
+  .rating{display:block;line-height:15px;}.rating-star{display:inline-block;width:75px;height:15px;background-repeat:no-repeat;background-image:url(data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAEsAAAClCAYAAAAUAAAYAAAAGXRFWHRTb2Z0d2FyZQBBZG9iZSBJbWFnZVJlYWR5ccllPAAAA5xJREFUeNrs3T9rFEEcxvG7qEQIglaCICKkin9AUEtBKxU7wS61VlYivgWj70TtNFj5BqzE7qxEWwsxKIoYn4UtluFmbm8nczvzm+/BjxyuDwNzu3uXD0+46f7LC5PA45Hm+WTYw1x2LRDc0jzTXB+wqMlsaLPutz8fDFjYZHYauAz3NBvt83XNnyUWNpn1nVm3OsHmsb3EomazzZnVXKMPNcc0xzUnNKc0Rzv/77fms+Z7O3vt9b1eU7bZrNN68l5zcolX4ofmsuZXTdnmMvyi2dR86Bmcac62P6vKrnVubpc0bxYE32nOab45N8YqsvPeDfcD4SOav4HjprPuu+H5BTt9LXDMfNbdLPfT678Fx6vKupt1o/O8+R3pkOaJ5/iktqx7z/qp+aq5q/nY+fczmheaK03Gs7D5rLtZdzSvA6/Ebc2u55j57HQB0TzW7AzkjiKzny6+2hlKNE8juMNcFqKBaIZndRlCNBBNgmx7ZkE0fbLtZkE0EA1EM17WuQwhGogGooFoss6296y52cNO+J6HLJoPaFdbsvA9zGerIxrPh85eWYgGooFoDiQbuAxp0UA0EVmdWbRo+ma1WbRoIBqIZtzsnHdDWjQQDUQD0WSbde5ZS2UhmtqJJtSEiVkXooFoIJre2VATJmZdiKZ2ogk1YSb8oVMvDeUPnSAaiCaPJkzMuhANRAPRQDQpsqEmTMy6EI11oolpwkA0EA1EcyDZmCYMRAPR+LMxTZjqiCamCQPRQDQQzehNGIgGooFoIJpVZ2OaMBBN7USTqgkD0UA0EE3vbKomDERTO9GkasKYJJpUTRiIBqKBaEZvwkA0EA1EA9GkyKZqwkA01olmrCYMRAPRQDR9LkO+0QmiKbAJUyTRjNWEgWggGohm9CYMRAPRQDQQzZDsWE0YiMYC0eTYhIFoIJrKiCbHJgxEY4FocmzCZEs0OTZhIBqIpjKiybEJA9FANBANROPL5tiEgWhKIJoSmzAQDURjjGhKbMJANCUQTYlNmNGIpsQmDEQD0RgjmhKbMBANRAPR1Es0JTZhIJpciMZaEwaigWgKJBprTRiIJheisdaESUo01powEA1EUyDRWGvCQDQQDURjm2isNWEgmlURzWw2q4pZIBqIJkOiCVyGJpkFolkV0ejMMvel28mIRptl7ku3IRqIpjCimfNuaJpZIBqIBqIpm2ice5Z5ZonJupvVkMRu4JW4qXnrOWY++1+AAQBw9BJSCTeN9wAAAABJRU5ErkJggg==);overflow:hidden; margin-top: 5px;}.allstar10{background-position:0px 0px;}.allstar9{background-position:0px -15px;}.allstar8{background-position:0px -30px;}.allstar7{background-position:0px -45px;}.allstar6{background-position:0px -60px;}.allstar5{background-position:0px -75px;}.allstar4{background-position:0px -90px;}.allstar3{background-position:0px -105px;}.allstar2{background-position:0px -120px;}.allstar1{background-position:0px -135px;}.allstar0{background-position:0px -150px;}.rating-average{color:#777;display:inline-block;font-size:13px;margin-left:10px;}
+  @media (prefers-color-scheme: dark) {
+    .post-preview{background: #3b3d42;}
+  }
+</style>
+
+  <meta name="description" content="Nim博弈
+问题描述
+
+有三堆各若干个物品，两个人轮流从某一堆取任意多的物品，规定每次至少取一个，多者不限，最后取光者得胜。
+
+问题分析
+C. Bouton证明了以下定理
+
+在正常的Nim游戏中，当且仅当堆的大小的nim-sum非零时，进行..." />
+  <meta property="og:title" content="Nim博弈 - JQM&#39;s site">
+  <meta property="og:description" content="Nim博弈
+问题描述
+
+有三堆各若干个物品，两个人轮流从某一堆取任意多的物品，规定每次至少取一个，多者不限，最后取光者得胜。
+
+问题分析
+C. Bouton证明了以下定理
+
+在正常的Nim游戏中，当且仅当堆的大小的nim-sum非零时，进行..." />
+  <meta property="og:type" content="articles">
+  <meta property="og:url" content="https://jinqimu.xyz/post/Nim博弈/" />
+  <!-- <meta property="og:image" content="https://jinqimu.xyz/images/avatar.png"> -->
+  <meta property="og:image" content="https://cdn.jsdelivr.net/gh/jinqimu/jinqimu.github.io/images/avatar.png">
+  <meta property="og:image:height" content="630">
+  <meta property="og:image:width" content="1200">
+  <meta name="twitter:title" content="Nim博弈 - JQM&#39;s site">
+  <meta name="twitter:description" content="Nim博弈
+问题描述
+
+有三堆各若干个物品，两个人轮流从某一堆取任意多的物品，规定每次至少取一个，多者不限，最后取光者得胜。
+
+问题分析
+C. Bouton证明了以下定理
+
+在正常的Nim游戏中，当且仅当堆的大小的nim-sum非零时，进行...">
+  <meta name="twitter:card" content="summary_large_image">
+  <link rel="canonical" href="https://jinqimu.xyz/post/Nim博弈/">
+
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/photoswipe@4.1.3/dist/photoswipe.css">
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/photoswipe@4.1.3/dist/default-skin/default-skin.css">
+ 
+  <!-- Vssue 的样式文件 -->
+  <!-- <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/meteorlxy/vssue/packages/vssue/dist/vssue.min.css"> -->
+
+  
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/jinqimu/jinqimu.github.io/media/css/prism-atom-dark.css">
+  
+
+  
+
+  <!-- 手机上继续 -->
+  <style>
+    #shareQR {
+      background-image: url("https://api.qrserver.com/v1/create-qr-code/?size=150x150&margin=13&data=https://jinqimu.xyz/post/Nim博弈/");
+      background-size: 110px 110px;
+      position: absolute;
+      width: 110px;
+      height: 110px;
+      z-index: 2;
+      /* border-width: 12.1;
+      border-color: white; */
+      display: block;
+      visibility: hidden;
+      transform: translate(3px, 2px);
+    }
+    .vwrap {
+      padding: 10px;
+      border-bottom-left-radius: 15px 255px!important;
+      border-bottom-right-radius: 220px 15px!important;
+      border-top-left-radius: 255px 15px!important;
+      border-top-right-radius: 15px 225px!important;
+      border: 3px solid #41403e!important;
+    }
+    .vbtn {
+      padding: 10px;
+      border-bottom-left-radius: 15px 255px!important;
+      border-bottom-right-radius: 220px 15px!important;
+      border-top-left-radius: 255px 15px!important;
+      border-top-right-radius: 15px 225px!important;
+      border: 3px solid #41403e!important;
+    }
+  </style>
+</head>
+
+<body>
+  <div class="antialiased flex flex-col min-h-screen" id="app">
+    <a href="https://jinqimu.xyz" class="fixed top-0 left-0 mt-4 bg-black text-white dark:text-gray-700 dark:bg-yellow-50 dark:hover:bg-black dark:hover:text-white inline-flex p-2 pl-8 hover:text-gray-700 hover:bg-yellow-50 font-bold z-10 transition-fast animated fadeInLeft">
+      JQM&#39;s site
+    </a>
+    <div class="max-w-4xl w-full mx-auto">
+      <div class="shadow-box bg-white dark:bg-gray-600 rounded-lg pt-32 md:pt-64 px-4 md:px-8 pb-8 animated fadeIn mb-8">
+        <h1 class="text-5xl font-semibold leading-normal pb-8 mb-8 border-b-8 border-gray-700">
+          Nim博弈
+        </h1>
+        
+        <div class="mb-8 flex flex-wrap">
+          <div class="text-gray-400 text-sm mr-4">2019-03-23 · 6 min read · <span title="署名-非商业性使用-禁止演绎 2.5 通用" onclick="window.open('https://creativecommons.org/licenses/by-nc-nd/2.5/deed.zh')" style="cursor: pointer;">CC BY-NC-ND 2.5</span></div>
+          
+          <div class="share" style="margin-left: auto;margin-right: 20px;cursor: pointer;" onclick="share(this)">
+            <a class="text-gray-400"><i class="ri-qr-code-line" style="position:relative; top:2px"></i>在手机上继续</a>
+            <span id="shareQR"></span>
+            <script>
+              // var flag = 0;
+              function share(item) {
+                // if(flag==0) {
+                //   item.lastElementChild.style.cssText += 'background-image: url("https://api.qrserver.com/v1/create-qr-code/?size=150x150&margin=13&data=https://jinqimu.xyz/post/Nim博弈/");' 
+                //   flag = 1;
+                // }
+                item.lastElementChild.style.visibility=="visible" ? item.lastElementChild.style.visibility = "hidden":item.lastElementChild.style.visibility = "visible";
+              }
+            </script>
+          </div>
+        </div>
+        <div class="markdown mb-8" v-pre>
+          <h1 id="nim博弈">Nim博弈</h1>
+<h3 id="问题描述">问题描述</h3>
+<blockquote>
+<p>有三堆各若干个物品，两个人轮流从某一堆取任意多的物品，规定每次至少取一个，多者不限，最后取光者得胜。</p>
+</blockquote>
+<h3 id="问题分析">问题分析</h3>
+<p>C. Bouton证明了以下定理</p>
+<blockquote>
+<p>在正常的Nim游戏中，当且仅当堆的大小的nim-sum非零时，进行第一次移动的玩家才具有获胜策略。否则，第二个玩家有一个获胜策略。</p>
+</blockquote>
+<p><em>nim-sum即每堆的大小的异或和。</em></p>
+<h4 id="证明">证明：</h4>
+<blockquote>
+<p><em>注意，nim-sum（⊕）通常服从加法交换律，还满足一个附加属性，X ⊕ X  = 0</em>。<br>
+设<em>x</em> 1，...，  <em>x n</em>是移动前堆的大小，<em>y</em> 1，...，  <em>y n</em>是移动后的相应大小。让<span class="katex"><span class="katex-mathml"><math><semantics><mrow><mi>s</mi><mo>=</mo><msub><mi>x</mi><mn>1</mn></msub><mo>⨁</mo><mi mathvariant="normal">.</mi><mi mathvariant="normal">.</mi><mi mathvariant="normal">.</mi><mo>⨁</mo><msub><mi>x</mi><mi>n</mi></msub><mi mathvariant="normal">​</mi></mrow><annotation encoding="application/x-tex">s = x_1 \bigoplus ... \bigoplus x_n​</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:0.43056em;vertical-align:0em;"></span><span class="mord mathdefault">s</span><span class="mspace" style="margin-right:0.2777777777777778em;"></span><span class="mrel">=</span><span class="mspace" style="margin-right:0.2777777777777778em;"></span></span><span class="base"><span class="strut" style="height:1.00001em;vertical-align:-0.25001em;"></span><span class="mord"><span class="mord mathdefault">x</span><span class="msupsub"><span class="vlist-t vlist-t2"><span class="vlist-r"><span class="vlist" style="height:0.30110799999999993em;"><span style="top:-2.5500000000000003em;margin-left:0em;margin-right:0.05em;"><span class="pstrut" style="height:2.7em;"></span><span class="sizing reset-size6 size3 mtight"><span class="mord mtight">1</span></span></span></span><span class="vlist-s">​</span></span><span class="vlist-r"><span class="vlist" style="height:0.15em;"><span></span></span></span></span></span></span><span class="mspace" style="margin-right:0.16666666666666666em;"></span><span class="mop op-symbol small-op" style="position:relative;top:-0.0000050000000000050004em;">⨁</span><span class="mspace" style="margin-right:0.16666666666666666em;"></span><span class="mord">.</span><span class="mord">.</span><span class="mord">.</span><span class="mspace" style="margin-right:0.16666666666666666em;"></span><span class="mop op-symbol small-op" style="position:relative;top:-0.0000050000000000050004em;">⨁</span><span class="mspace" style="margin-right:0.16666666666666666em;"></span><span class="mord"><span class="mord mathdefault">x</span><span class="msupsub"><span class="vlist-t vlist-t2"><span class="vlist-r"><span class="vlist" style="height:0.151392em;"><span style="top:-2.5500000000000003em;margin-left:0em;margin-right:0.05em;"><span class="pstrut" style="height:2.7em;"></span><span class="sizing reset-size6 size3 mtight"><span class="mord mathdefault mtight">n</span></span></span></span><span class="vlist-s">​</span></span><span class="vlist-r"><span class="vlist" style="height:0.15em;"><span></span></span></span></span></span></span><span class="mord">​</span></span></span></span> 和 <span class="katex"><span class="katex-mathml"><math><semantics><mrow><mi>t</mi><mo>=</mo><msub><mi>y</mi><mn>1</mn></msub><mo>⨁</mo><mi mathvariant="normal">.</mi><mi mathvariant="normal">.</mi><mi mathvariant="normal">.</mi><mo>⨁</mo><msub><mi>y</mi><mi>n</mi></msub><mi mathvariant="normal">​</mi></mrow><annotation encoding="application/x-tex">t = y_1 \bigoplus ... \bigoplus y_n​</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:0.61508em;vertical-align:0em;"></span><span class="mord mathdefault">t</span><span class="mspace" style="margin-right:0.2777777777777778em;"></span><span class="mrel">=</span><span class="mspace" style="margin-right:0.2777777777777778em;"></span></span><span class="base"><span class="strut" style="height:1.00001em;vertical-align:-0.25001em;"></span><span class="mord"><span class="mord mathdefault" style="margin-right:0.03588em;">y</span><span class="msupsub"><span class="vlist-t vlist-t2"><span class="vlist-r"><span class="vlist" style="height:0.30110799999999993em;"><span style="top:-2.5500000000000003em;margin-left:-0.03588em;margin-right:0.05em;"><span class="pstrut" style="height:2.7em;"></span><span class="sizing reset-size6 size3 mtight"><span class="mord mtight">1</span></span></span></span><span class="vlist-s">​</span></span><span class="vlist-r"><span class="vlist" style="height:0.15em;"><span></span></span></span></span></span></span><span class="mspace" style="margin-right:0.16666666666666666em;"></span><span class="mop op-symbol small-op" style="position:relative;top:-0.0000050000000000050004em;">⨁</span><span class="mspace" style="margin-right:0.16666666666666666em;"></span><span class="mord">.</span><span class="mord">.</span><span class="mord">.</span><span class="mspace" style="margin-right:0.16666666666666666em;"></span><span class="mop op-symbol small-op" style="position:relative;top:-0.0000050000000000050004em;">⨁</span><span class="mspace" style="margin-right:0.16666666666666666em;"></span><span class="mord"><span class="mord mathdefault" style="margin-right:0.03588em;">y</span><span class="msupsub"><span class="vlist-t vlist-t2"><span class="vlist-r"><span class="vlist" style="height:0.151392em;"><span style="top:-2.5500000000000003em;margin-left:-0.03588em;margin-right:0.05em;"><span class="pstrut" style="height:2.7em;"></span><span class="sizing reset-size6 size3 mtight"><span class="mord mathdefault mtight">n</span></span></span></span><span class="vlist-s">​</span></span><span class="vlist-r"><span class="vlist" style="height:0.15em;"><span></span></span></span></span></span></span><span class="mord">​</span></span></span></span>。假设一次移动在堆<em>k</em>中，则对于所有<em>i</em>  ≠  <em>k</em>，我们有<span class="katex"><span class="katex-mathml"><math><semantics><mrow><msub><mi>x</mi><mi>i</mi></msub><mo>=</mo><msub><mi>y</mi><mi>i</mi></msub><mi mathvariant="normal">​</mi></mrow><annotation encoding="application/x-tex">x_i = y_i​</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:0.58056em;vertical-align:-0.15em;"></span><span class="mord"><span class="mord mathdefault">x</span><span class="msupsub"><span class="vlist-t vlist-t2"><span class="vlist-r"><span class="vlist" style="height:0.31166399999999994em;"><span style="top:-2.5500000000000003em;margin-left:0em;margin-right:0.05em;"><span class="pstrut" style="height:2.7em;"></span><span class="sizing reset-size6 size3 mtight"><span class="mord mathdefault mtight">i</span></span></span></span><span class="vlist-s">​</span></span><span class="vlist-r"><span class="vlist" style="height:0.15em;"><span></span></span></span></span></span></span><span class="mspace" style="margin-right:0.2777777777777778em;"></span><span class="mrel">=</span><span class="mspace" style="margin-right:0.2777777777777778em;"></span></span><span class="base"><span class="strut" style="height:0.625em;vertical-align:-0.19444em;"></span><span class="mord"><span class="mord mathdefault" style="margin-right:0.03588em;">y</span><span class="msupsub"><span class="vlist-t vlist-t2"><span class="vlist-r"><span class="vlist" style="height:0.31166399999999994em;"><span style="top:-2.5500000000000003em;margin-left:-0.03588em;margin-right:0.05em;"><span class="pstrut" style="height:2.7em;"></span><span class="sizing reset-size6 size3 mtight"><span class="mord mathdefault mtight">i</span></span></span></span><span class="vlist-s">​</span></span><span class="vlist-r"><span class="vlist" style="height:0.15em;"><span></span></span></span></span></span></span><span class="mord">​</span></span></span></span>，并且<span class="katex"><span class="katex-mathml"><math><semantics><mrow><msub><mi>x</mi><mi>k</mi></msub><mo>&gt;</mo><msub><mi>y</mi><mi>k</mi></msub><mi mathvariant="normal">​</mi></mrow><annotation encoding="application/x-tex">x_k &gt; y_k​</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:0.6891em;vertical-align:-0.15em;"></span><span class="mord"><span class="mord mathdefault">x</span><span class="msupsub"><span class="vlist-t vlist-t2"><span class="vlist-r"><span class="vlist" style="height:0.33610799999999996em;"><span style="top:-2.5500000000000003em;margin-left:0em;margin-right:0.05em;"><span class="pstrut" style="height:2.7em;"></span><span class="sizing reset-size6 size3 mtight"><span class="mord mathdefault mtight" style="margin-right:0.03148em;">k</span></span></span></span><span class="vlist-s">​</span></span><span class="vlist-r"><span class="vlist" style="height:0.15em;"><span></span></span></span></span></span></span><span class="mspace" style="margin-right:0.2777777777777778em;"></span><span class="mrel">&gt;</span><span class="mspace" style="margin-right:0.2777777777777778em;"></span></span><span class="base"><span class="strut" style="height:0.625em;vertical-align:-0.19444em;"></span><span class="mord"><span class="mord mathdefault" style="margin-right:0.03588em;">y</span><span class="msupsub"><span class="vlist-t vlist-t2"><span class="vlist-r"><span class="vlist" style="height:0.33610799999999996em;"><span style="top:-2.5500000000000003em;margin-left:-0.03588em;margin-right:0.05em;"><span class="pstrut" style="height:2.7em;"></span><span class="sizing reset-size6 size3 mtight"><span class="mord mathdefault mtight" style="margin-right:0.03148em;">k</span></span></span></span><span class="vlist-s">​</span></span><span class="vlist-r"><span class="vlist" style="height:0.15em;"><span></span></span></span></span></span></span><span class="mord">​</span></span></span></span>。根据上面提到的异或的属性，我们有</p>
+<pre><code>t = 0 ⊕ t
+    = s ⊕ s ⊕ t
+    = s ⊕ (x1 ⊕ ... ⊕ xn) ⊕ (y1 ⊕ ... ⊕ yn)
+    = s ⊕ (x1 ⊕ y1) ⊕ ... ⊕ (xn ⊕ yn)
+    = s ⊕ 0 ⊕ ... ⊕ 0 ⊕ (xk ⊕ yk) ⊕ 0 ⊕ ... ⊕ 0
+    = s ⊕ xk ⊕ yk
+
+(*) t = s ⊕ xk ⊕ yk
+</code></pre>
+</blockquote>
+<p>通过以下两个引理的归纳。</p>
+<ul>
+<li><strong>lemma 1</strong></li>
+</ul>
+<blockquote>
+<p>如果<em>s</em> = 0，则无论采取何种移动，<em>t</em> ≠ 0。</p>
+<p><em>证明：<em>如果没有可能的移动，则引理是<a href="https://en.wikipedia.org/wiki/Vacuous_truth">空真(vacuously true)</a>（第一个玩家按照定义无法进行正常的游戏），即由于前件为假导致结果为真。否则，对堆</em>k</em>的任何操作将产生<span class="katex"><span class="katex-mathml"><math><semantics><mrow><mi>t</mi><mo>=</mo><msub><mi>x</mi><mi>k</mi></msub><mo>⨁</mo><msub><mi>y</mi><mi>k</mi></msub><mi mathvariant="normal">​</mi></mrow><annotation encoding="application/x-tex">t  =  x_k \bigoplus y_k​</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:0.61508em;vertical-align:0em;"></span><span class="mord mathdefault">t</span><span class="mspace" style="margin-right:0.2777777777777778em;"></span><span class="mrel">=</span><span class="mspace" style="margin-right:0.2777777777777778em;"></span></span><span class="base"><span class="strut" style="height:1.00001em;vertical-align:-0.25001em;"></span><span class="mord"><span class="mord mathdefault">x</span><span class="msupsub"><span class="vlist-t vlist-t2"><span class="vlist-r"><span class="vlist" style="height:0.33610799999999996em;"><span style="top:-2.5500000000000003em;margin-left:0em;margin-right:0.05em;"><span class="pstrut" style="height:2.7em;"></span><span class="sizing reset-size6 size3 mtight"><span class="mord mathdefault mtight" style="margin-right:0.03148em;">k</span></span></span></span><span class="vlist-s">​</span></span><span class="vlist-r"><span class="vlist" style="height:0.15em;"><span></span></span></span></span></span></span><span class="mspace" style="margin-right:0.16666666666666666em;"></span><span class="mop op-symbol small-op" style="position:relative;top:-0.0000050000000000050004em;">⨁</span><span class="mspace" style="margin-right:0.16666666666666666em;"></span><span class="mord"><span class="mord mathdefault" style="margin-right:0.03588em;">y</span><span class="msupsub"><span class="vlist-t vlist-t2"><span class="vlist-r"><span class="vlist" style="height:0.33610799999999996em;"><span style="top:-2.5500000000000003em;margin-left:-0.03588em;margin-right:0.05em;"><span class="pstrut" style="height:2.7em;"></span><span class="sizing reset-size6 size3 mtight"><span class="mord mathdefault mtight" style="margin-right:0.03148em;">k</span></span></span></span><span class="vlist-s">​</span></span><span class="vlist-r"><span class="vlist" style="height:0.15em;"><span></span></span></span></span></span></span><span class="mord">​</span></span></span></span>。该数字非零，因为<span class="katex"><span class="katex-mathml"><math><semantics><mrow><msub><mi>x</mi><mi>k</mi></msub><mi mathvariant="normal">≠</mi><msub><mi>y</mi><mi>k</mi></msub><mi mathvariant="normal">​</mi></mrow><annotation encoding="application/x-tex">x_k \neq y_k​</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:0.8888799999999999em;vertical-align:-0.19444em;"></span><span class="mord"><span class="mord mathdefault">x</span><span class="msupsub"><span class="vlist-t vlist-t2"><span class="vlist-r"><span class="vlist" style="height:0.33610799999999996em;"><span style="top:-2.5500000000000003em;margin-left:0em;margin-right:0.05em;"><span class="pstrut" style="height:2.7em;"></span><span class="sizing reset-size6 size3 mtight"><span class="mord mathdefault mtight" style="margin-right:0.03148em;">k</span></span></span></span><span class="vlist-s">​</span></span><span class="vlist-r"><span class="vlist" style="height:0.15em;"><span></span></span></span></span></span></span><span class="mspace" style="margin-right:0.2777777777777778em;"></span><span class="mrel"><span class="mrel"><span class="mord"><span class="vlist-t vlist-t2"><span class="vlist-r"><span class="vlist" style="height:0.69444em;"><span style="top:-3em;"><span class="pstrut" style="height:3em;"></span><span class="rlap"><span class="strut" style="height:0.8888799999999999em;vertical-align:-0.19444em;"></span><span class="inner"><span class="mrel"></span></span><span class="fix"></span></span></span></span><span class="vlist-s">​</span></span><span class="vlist-r"><span class="vlist" style="height:0.19444em;"><span></span></span></span></span></span></span><span class="mrel">=</span></span><span class="mspace" style="margin-right:0.2777777777777778em;"></span></span><span class="base"><span class="strut" style="height:0.625em;vertical-align:-0.19444em;"></span><span class="mord"><span class="mord mathdefault" style="margin-right:0.03588em;">y</span><span class="msupsub"><span class="vlist-t vlist-t2"><span class="vlist-r"><span class="vlist" style="height:0.33610799999999996em;"><span style="top:-2.5500000000000003em;margin-left:-0.03588em;margin-right:0.05em;"><span class="pstrut" style="height:2.7em;"></span><span class="sizing reset-size6 size3 mtight"><span class="mord mathdefault mtight" style="margin-right:0.03148em;">k</span></span></span></span><span class="vlist-s">​</span></span><span class="vlist-r"><span class="vlist" style="height:0.15em;"><span></span></span></span></span></span></span><span class="mord">​</span></span></span></span>。</p>
+</blockquote>
+<ul>
+<li><strong>Lemma 2</strong></li>
+</ul>
+<blockquote>
+<p>如果<em>s</em> ≠ 0，则可以进行移动以使<em>t</em> = 0。</p>
+<p><em>证明：<em>设</em>d</em>是<em>s</em>的二进制表示中最左边（最高有效）非零位的位置，并选择堆<em>k</em>使得<span class="katex"><span class="katex-mathml"><math><semantics><mrow><msub><mi>x</mi><mi>k</mi></msub></mrow><annotation encoding="application/x-tex">x_k</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:0.58056em;vertical-align:-0.15em;"></span><span class="mord"><span class="mord mathdefault">x</span><span class="msupsub"><span class="vlist-t vlist-t2"><span class="vlist-r"><span class="vlist" style="height:0.33610799999999996em;"><span style="top:-2.5500000000000003em;margin-left:0em;margin-right:0.05em;"><span class="pstrut" style="height:2.7em;"></span><span class="sizing reset-size6 size3 mtight"><span class="mord mathdefault mtight" style="margin-right:0.03148em;">k</span></span></span></span><span class="vlist-s">​</span></span><span class="vlist-r"><span class="vlist" style="height:0.15em;"><span></span></span></span></span></span></span></span></span></span>的第<em>d</em>位也非零。（这样的<em>k</em>必须存在，否则s的第d位将为0）然后让 <span class="katex"><span class="katex-mathml"><math><semantics><mrow><msub><mi>y</mi><mi>k</mi></msub><mo>=</mo><mi>s</mi><mo>⨁</mo><msub><mi>x</mi><mi>k</mi></msub></mrow><annotation encoding="application/x-tex">y_k = s \bigoplus x_k</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:0.625em;vertical-align:-0.19444em;"></span><span class="mord"><span class="mord mathdefault" style="margin-right:0.03588em;">y</span><span class="msupsub"><span class="vlist-t vlist-t2"><span class="vlist-r"><span class="vlist" style="height:0.33610799999999996em;"><span style="top:-2.5500000000000003em;margin-left:-0.03588em;margin-right:0.05em;"><span class="pstrut" style="height:2.7em;"></span><span class="sizing reset-size6 size3 mtight"><span class="mord mathdefault mtight" style="margin-right:0.03148em;">k</span></span></span></span><span class="vlist-s">​</span></span><span class="vlist-r"><span class="vlist" style="height:0.15em;"><span></span></span></span></span></span></span><span class="mspace" style="margin-right:0.2777777777777778em;"></span><span class="mrel">=</span><span class="mspace" style="margin-right:0.2777777777777778em;"></span></span><span class="base"><span class="strut" style="height:1.00001em;vertical-align:-0.25001em;"></span><span class="mord mathdefault">s</span><span class="mspace" style="margin-right:0.16666666666666666em;"></span><span class="mop op-symbol small-op" style="position:relative;top:-0.0000050000000000050004em;">⨁</span><span class="mspace" style="margin-right:0.16666666666666666em;"></span><span class="mord"><span class="mord mathdefault">x</span><span class="msupsub"><span class="vlist-t vlist-t2"><span class="vlist-r"><span class="vlist" style="height:0.33610799999999996em;"><span style="top:-2.5500000000000003em;margin-left:0em;margin-right:0.05em;"><span class="pstrut" style="height:2.7em;"></span><span class="sizing reset-size6 size3 mtight"><span class="mord mathdefault mtight" style="margin-right:0.03148em;">k</span></span></span></span><span class="vlist-s">​</span></span><span class="vlist-r"><span class="vlist" style="height:0.15em;"><span></span></span></span></span></span></span></span></span></span>，我们可以知道 <span class="katex"><span class="katex-mathml"><math><semantics><mrow><msub><mi>y</mi><mi>k</mi></msub><mo>&lt;</mo><msub><mi>x</mi><mi>k</mi></msub></mrow><annotation encoding="application/x-tex">y_k &lt; x_k</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:0.7335400000000001em;vertical-align:-0.19444em;"></span><span class="mord"><span class="mord mathdefault" style="margin-right:0.03588em;">y</span><span class="msupsub"><span class="vlist-t vlist-t2"><span class="vlist-r"><span class="vlist" style="height:0.33610799999999996em;"><span style="top:-2.5500000000000003em;margin-left:-0.03588em;margin-right:0.05em;"><span class="pstrut" style="height:2.7em;"></span><span class="sizing reset-size6 size3 mtight"><span class="mord mathdefault mtight" style="margin-right:0.03148em;">k</span></span></span></span><span class="vlist-s">​</span></span><span class="vlist-r"><span class="vlist" style="height:0.15em;"><span></span></span></span></span></span></span><span class="mspace" style="margin-right:0.2777777777777778em;"></span><span class="mrel">&lt;</span><span class="mspace" style="margin-right:0.2777777777777778em;"></span></span><span class="base"><span class="strut" style="height:0.58056em;vertical-align:-0.15em;"></span><span class="mord"><span class="mord mathdefault">x</span><span class="msupsub"><span class="vlist-t vlist-t2"><span class="vlist-r"><span class="vlist" style="height:0.33610799999999996em;"><span style="top:-2.5500000000000003em;margin-left:0em;margin-right:0.05em;"><span class="pstrut" style="height:2.7em;"></span><span class="sizing reset-size6 size3 mtight"><span class="mord mathdefault mtight" style="margin-right:0.03148em;">k</span></span></span></span><span class="vlist-s">​</span></span><span class="vlist-r"><span class="vlist" style="height:0.15em;"><span></span></span></span></span></span></span></span></span></span>：在 <span class="katex"><span class="katex-mathml"><math><semantics><mrow><msub><mi>x</mi><mi>k</mi></msub></mrow><annotation encoding="application/x-tex">x_k</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:0.58056em;vertical-align:-0.15em;"></span><span class="mord"><span class="mord mathdefault">x</span><span class="msupsub"><span class="vlist-t vlist-t2"><span class="vlist-r"><span class="vlist" style="height:0.33610799999999996em;"><span style="top:-2.5500000000000003em;margin-left:0em;margin-right:0.05em;"><span class="pstrut" style="height:2.7em;"></span><span class="sizing reset-size6 size3 mtight"><span class="mord mathdefault mtight" style="margin-right:0.03148em;">k</span></span></span></span><span class="vlist-s">​</span></span><span class="vlist-r"><span class="vlist" style="height:0.15em;"><span></span></span></span></span></span></span></span></span></span> 和  <span class="katex"><span class="katex-mathml"><math><semantics><mrow><msub><mi>y</mi><mi>k</mi></msub></mrow><annotation encoding="application/x-tex">y_k</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:0.625em;vertical-align:-0.19444em;"></span><span class="mord"><span class="mord mathdefault" style="margin-right:0.03588em;">y</span><span class="msupsub"><span class="vlist-t vlist-t2"><span class="vlist-r"><span class="vlist" style="height:0.33610799999999996em;"><span style="top:-2.5500000000000003em;margin-left:-0.03588em;margin-right:0.05em;"><span class="pstrut" style="height:2.7em;"></span><span class="sizing reset-size6 size3 mtight"><span class="mord mathdefault mtight" style="margin-right:0.03148em;">k</span></span></span></span><span class="vlist-s">​</span></span><span class="vlist-r"><span class="vlist" style="height:0.15em;"><span></span></span></span></span></span></span></span></span></span> 中第<em>d</em>位左边所有位是一样的，位<em>d</em>从1减小为0（将值减小 <span class="katex"><span class="katex-mathml"><math><semantics><mrow><msup><mn>2</mn><mi>d</mi></msup></mrow><annotation encoding="application/x-tex">2^d</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:0.849108em;vertical-align:0em;"></span><span class="mord"><span class="mord">2</span><span class="msupsub"><span class="vlist-t"><span class="vlist-r"><span class="vlist" style="height:0.849108em;"><span style="top:-3.063em;margin-right:0.05em;"><span class="pstrut" style="height:2.7em;"></span><span class="sizing reset-size6 size3 mtight"><span class="mord mathdefault mtight">d</span></span></span></span></span></span></span></span></span></span></span>），其余位的任何变化最多为 <span class="katex"><span class="katex-mathml"><math><semantics><mrow><msup><mn>2</mn><mi>d</mi></msup></mrow><annotation encoding="application/x-tex">2^d</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:0.849108em;vertical-align:0em;"></span><span class="mord"><span class="mord">2</span><span class="msupsub"><span class="vlist-t"><span class="vlist-r"><span class="vlist" style="height:0.849108em;"><span style="top:-3.063em;margin-right:0.05em;"><span class="pstrut" style="height:2.7em;"></span><span class="sizing reset-size6 size3 mtight"><span class="mord mathdefault mtight">d</span></span></span></span></span></span></span></span></span></span></span>-1。第一个玩家可以从第<em>k</em>堆中拿出<span class="katex"><span class="katex-mathml"><math><semantics><mrow><msub><mi>x</mi><mi>k</mi></msub><mo>−</mo><msub><mi>y</mi><mi>k</mi></msub></mrow><annotation encoding="application/x-tex">x_k-y_k</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:0.73333em;vertical-align:-0.15em;"></span><span class="mord"><span class="mord mathdefault">x</span><span class="msupsub"><span class="vlist-t vlist-t2"><span class="vlist-r"><span class="vlist" style="height:0.33610799999999996em;"><span style="top:-2.5500000000000003em;margin-left:0em;margin-right:0.05em;"><span class="pstrut" style="height:2.7em;"></span><span class="sizing reset-size6 size3 mtight"><span class="mord mathdefault mtight" style="margin-right:0.03148em;">k</span></span></span></span><span class="vlist-s">​</span></span><span class="vlist-r"><span class="vlist" style="height:0.15em;"><span></span></span></span></span></span></span><span class="mspace" style="margin-right:0.2222222222222222em;"></span><span class="mbin">−</span><span class="mspace" style="margin-right:0.2222222222222222em;"></span></span><span class="base"><span class="strut" style="height:0.625em;vertical-align:-0.19444em;"></span><span class="mord"><span class="mord mathdefault" style="margin-right:0.03588em;">y</span><span class="msupsub"><span class="vlist-t vlist-t2"><span class="vlist-r"><span class="vlist" style="height:0.33610799999999996em;"><span style="top:-2.5500000000000003em;margin-left:-0.03588em;margin-right:0.05em;"><span class="pstrut" style="height:2.7em;"></span><span class="sizing reset-size6 size3 mtight"><span class="mord mathdefault mtight" style="margin-right:0.03148em;">k</span></span></span></span><span class="vlist-s">​</span></span><span class="vlist-r"><span class="vlist" style="height:0.15em;"><span></span></span></span></span></span></span></span></span></span>个物品，然后</p>
+<pre><code>t = s ⊕ xk ⊕ yk
+= s ⊕ xk ⊕ (s ⊕ xk)
+= 0
+</code></pre>
+</blockquote>
+<p>由于最后一个人是<span class="katex"><span class="katex-mathml"><math><semantics><mrow><mi>s</mi><mi mathvariant="normal">≠</mi><mn>0</mn></mrow><annotation encoding="application/x-tex">s\neq 0</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:0.8888799999999999em;vertical-align:-0.19444em;"></span><span class="mord mathdefault">s</span><span class="mspace" style="margin-right:0.2777777777777778em;"></span><span class="mrel"><span class="mrel"><span class="mord"><span class="vlist-t vlist-t2"><span class="vlist-r"><span class="vlist" style="height:0.69444em;"><span style="top:-3em;"><span class="pstrut" style="height:3em;"></span><span class="rlap"><span class="strut" style="height:0.8888799999999999em;vertical-align:-0.19444em;"></span><span class="inner"><span class="mrel"></span></span><span class="fix"></span></span></span></span><span class="vlist-s">​</span></span><span class="vlist-r"><span class="vlist" style="height:0.19444em;"><span></span></span></span></span></span></span><span class="mrel">=</span></span><span class="mspace" style="margin-right:0.2777777777777778em;"></span></span><span class="base"><span class="strut" style="height:0.64444em;vertical-align:0em;"></span><span class="mord">0</span></span></span></span>,<span class="katex"><span class="katex-mathml"><math><semantics><mrow><mi>t</mi><mo>=</mo><mn>0</mn></mrow><annotation encoding="application/x-tex">t = 0</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:0.61508em;vertical-align:0em;"></span><span class="mord mathdefault">t</span><span class="mspace" style="margin-right:0.2777777777777778em;"></span><span class="mrel">=</span><span class="mspace" style="margin-right:0.2777777777777778em;"></span></span><span class="base"><span class="strut" style="height:0.64444em;vertical-align:0em;"></span><span class="mord">0</span></span></span></span>的情况，那么只要保证最初是 lemma2的<span class="katex"><span class="katex-mathml"><math><semantics><mrow><mi>s</mi><mi mathvariant="normal">≠</mi><mn>0</mn></mrow><annotation encoding="application/x-tex">s\neq 0</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:0.8888799999999999em;vertical-align:-0.19444em;"></span><span class="mord mathdefault">s</span><span class="mspace" style="margin-right:0.2777777777777778em;"></span><span class="mrel"><span class="mrel"><span class="mord"><span class="vlist-t vlist-t2"><span class="vlist-r"><span class="vlist" style="height:0.69444em;"><span style="top:-3em;"><span class="pstrut" style="height:3em;"></span><span class="rlap"><span class="strut" style="height:0.8888799999999999em;vertical-align:-0.19444em;"></span><span class="inner"><span class="mrel"></span></span><span class="fix"></span></span></span></span><span class="vlist-s">​</span></span><span class="vlist-r"><span class="vlist" style="height:0.19444em;"><span></span></span></span></span></span></span><span class="mrel">=</span></span><span class="mspace" style="margin-right:0.2777777777777778em;"></span></span><span class="base"><span class="strut" style="height:0.64444em;vertical-align:0em;"></span><span class="mord">0</span></span></span></span>,$t = 0 ，在lemma2（第一个人）和lemma1（第二个人）交替多次后，必然是第一个人得到最终的胜利。反正若是lemma1为初始状态，则第二人将胜利。</p>
+<p>P.S. 此定理仅在有堆的大小为2或大于2时成立</p>
+<h3 id="范例问题">范例问题</h3>
+<h4 id="problem">problem</h4>
+<p><a href="http://acm.hdu.edu.cn/showproblem.php?pid=1907">HDU1907</a></p>
+<blockquote>
+<p><strong>John</strong></p>
+<p><strong>Time Limit: 5000/1000 MS (Java/Others)    Memory Limit: 65535/32768 K (Java/Others)Total Submission(s): 6413    Accepted Submission(s): 3698</strong></p>
+<p><strong>Problem Description</strong></p>
+<p>Little John is playing very funny game with his younger brother. There is one big box filled with M&amp;Ms of different colors. At first John has to eat several M&amp;Ms of the same color. Then his opponent has to make a turn. And so on. Please note that each player has to eat at least one M&amp;M during his turn. If John (or his brother) will eat the last M&amp;M from the box he will be considered as a looser and he will have to buy a new candy box.</p>
+<p>Both of players are using optimal game strategy. John starts first always. You will be given information about M&amp;Ms and your task is to determine a winner of such a beautiful game.</p>
+<p><strong>Input</strong></p>
+<p>The first line of input will contain a single integer T – the number of test cases. Next T pairs of lines will describe tests in a following format. The first line of each test will contain an integer N – the amount of different M&amp;M colors in a box. Next line will contain N integers Ai, separated by spaces – amount of M&amp;Ms of i-th color.</p>
+<p>Constraints:<br>
+1 &lt;= T &lt;= 474,<br>
+1 &lt;= N &lt;= 47,<br>
+1 &lt;= Ai &lt;= 4747</p>
+<p><strong>Output</strong></p>
+<p>Output T lines each of them containing information about game winner. Print “John” if John will win the game or “Brother” in other case.</p>
+<p><strong>Sample Input</strong></p>
+<pre><code>2
+3
+3 5 1
+1
+1
+</code></pre>
+<p><strong>Sample Output</strong></p>
+<pre><code>John
+Brother
+</code></pre>
+</blockquote>
+<h4 id="answer">answer</h4>
+<pre><code class="language-cpp">#include&lt;cstdio&gt;
+int main()
+{
+    int t,n,a,sum,s;
+    scanf(&quot;%d&quot;,&amp;t);
+    while(t--)
+    {
+        sum=0;
+        s=0;
+        scanf(&quot;%d&quot;,&amp;n);
+        for(int i=0;i&lt;n;i++)
+        {
+            scanf(&quot;%d&quot;,&amp;a);
+            s^=a;
+            sum+=a;
+        }
+        if(sum==n)//所有堆大小都为1
+        {
+            if(sum%2==0) printf(&quot;John\n&quot;);
+            else printf(&quot;Brother\n&quot;);
+        }
+        else
+        {
+            if(s==0) printf(&quot;Brother\n&quot;);
+            else printf(&quot;John\n&quot;);
+        }
+    }
+    return 0;
+}
+</code></pre>
+<h3 id="问题扩展">问题扩展</h3>
+<p>如果Nim游戏中的规则稍微变动一下,每次最多只能取K个,怎么处理?</p>
+<blockquote>
+<p>方法是将每堆石子数mod (k+1).</p>
+</blockquote>
+
+        </div>
+        <!-- Share to Twitter, Weibo, Telegram -->
+        <div class="flex items-center">
+          <div class="mr-4 flex items-center">
+            <i class="ri-share-forward-line text-gray-500"></i>
+          </div>
+          <div class="px-4 cursor-pointer text-blue-500 hover:bg-blue-100 dark:hover:bg-gray-600 inline-flex" @click="shareToTwitter">
+            <i class="ri-twitter-line"></i>
+          </div>
+          <div class="px-4 cursor-pointer text-red-500 hover:bg-red-100 dark:hover:bg-gray-600 inline-flex" @click="shareToWeibo">
+            <i class="ri-weibo-line"></i>
+          </div>
+          <div class="px-4 cursor-pointer text-indigo-500 hover:bg-indigo-100 dark:hover:bg-gray-600 inline-flex" @click="shareToTelegram">
+            <i class="ri-telegram-line"></i>
+          </div>
+          <div class="px-4 cursor-pointer text-blue-500 hover:bg-blue-100 dark:hover:bg-gray-600 inline-flex" onclick="alert('其实并没有用=-=')">
+            <i class="ri-qq-line"></i>
+          </div>
+          <div class="px-4 cursor-pointer text-green-500 hover:bg-green-100 dark:hover:bg-gray-600 inline-flex" onclick="alert('其实并没有用|。|')">
+            <i class="ri-wechat-line"></i>
+          </div>
+        </div>
+      </div>
+
+      
+
+      <!-- 引用vssue -->
+      <!-- <div id="vssue"></div> -->
+
+      <div id="vlaine-comment"></div>
+
+      <footer class="py-12 text-center px-4 md:px-0" v-pre>
+  Powered by <a href="https://github.com/getgridea/gridea" target="_blank">Gridea</a> | JinQimu 2020 | <a href="https://travellings.now.sh/" target="blank" title="开往-友链接力"><img class="travelling"  src="https://cdn.jsdelivr.net/gh/volfclub/travellings@master/assets/logo.svg" alt="开往-友链接力" style="width:90px;display:inline"></a>
+</footer>
+    </div>
+
+    <!-- TOC Container -->
+    <div class="fixed right-0 bottom-0 mb-16 mr-4 shadow w-8 h-8 rounded-full flex justify-center items-center z-10 cursor-pointer bg-white dark:bg-gray-500 dark:text-gray-200 hover:shadow-lg transition-all animated fadeInRight" @click="showToc = true">
+      <i class="ri-file-list-line"></i>
+    </div>
+
+    <div class="fixed right-0 top-0 bottom-0 overflow-y-auto w-64 bg-white dark:bg-gray-800 p-4 border-l border-gray-100 dark:border-gray-600 z-10 transition-fast" :class="{ '-mr-64': !showToc }">
+      <div class="flex mb-4 justify-end">
+        <div class="w-8 h-8 inline-flex justify-center items-center rounded-full cursor-pointer hover:bg-gray-200 dark:hover:bg-gray-600 transition-fast" @click="showToc = false">
+          <i class="ri-close-line text-lg"></i>
+        </div>
+      </div>
+      <div class="post-toc-container">
+        <ul class="markdownIt-TOC">
+<li><a href="#nim%E5%8D%9A%E5%BC%88">Nim博弈</a><br>
+*
+<ul>
+<li><a href="#%E9%97%AE%E9%A2%98%E6%8F%8F%E8%BF%B0">问题描述</a></li>
+<li><a href="#%E9%97%AE%E9%A2%98%E5%88%86%E6%9E%90">问题分析</a>
+<ul>
+<li><a href="#%E8%AF%81%E6%98%8E">证明：</a></li>
+</ul>
+</li>
+<li><a href="#%E8%8C%83%E4%BE%8B%E9%97%AE%E9%A2%98">范例问题</a>
+<ul>
+<li><a href="#problem">problem</a></li>
+<li><a href="#answer">answer</a></li>
+</ul>
+</li>
+<li><a href="#%E9%97%AE%E9%A2%98%E6%89%A9%E5%B1%95">问题扩展</a></li>
+</ul>
+</li>
+</ul>
+
+      </div>
+    </div>
+
+    <!-- Back to top -->
+    <div class="fixed right-0 bottom-0 mb-4 mr-4 shadow w-8 h-8 rounded-full flex justify-center items-center z-10 cursor-pointer bg-white hover:shadow-lg transition-all dark:bg-gray-500 dark:text-gray-200" @click="backToUp" v-show="scrolled">
+      <i class="ri-arrow-up-line"></i>
+    </div>
+  </div>
+
+  <!-- Root element of PhotoSwipe. Must have class pswp. -->
+<div class="pswp" tabindex="-1" role="dialog" aria-hidden="true">
+  <!-- Background of PhotoSwipe. 
+        It's a separate element as animating opacity is faster than rgba(). -->
+  <div class="pswp__bg">
+  </div>
+  <!-- Slides wrapper with overflow:hidden. -->
+  <div class="pswp__scroll-wrap">
+    <!-- Container that holds slides. 
+            PhotoSwipe keeps only 3 of them in the DOM to save memory.
+            Don't modify these 3 pswp__item elements, data is added later on. -->
+    <div class="pswp__container">
+      <div class="pswp__item">
+      </div>
+      <div class="pswp__item">
+      </div>
+      <div class="pswp__item">
+      </div>
+    </div>
+    <!-- Default (PhotoSwipeUI_Default) interface on top of sliding area. Can be changed. -->
+    <div class="pswp__ui pswp__ui--hidden">
+      <div class="pswp__top-bar">
+        <!--  Controls are self-explanatory. Order can be changed. -->
+        <div class="pswp__counter">
+        </div>
+        <button class="pswp__button pswp__button--close" title="Close (Esc)"></button>
+        <button class="pswp__button pswp__button--fs" title="Toggle fullscreen"></button>
+        <button class="pswp__button pswp__button--zoom" title="Zoom in/out"></button>
+        <!-- Preloader demo http://codepen.io/dimsemenov/pen/yyBWoR -->
+        <!-- element will get class pswp__preloader--active when preloader is running -->
+        <div class="pswp__preloader">
+          <div class="pswp__preloader__icn">
+            <div class="pswp__preloader__cut">
+              <div class="pswp__preloader__donut">
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="pswp__share-modal pswp__share-modal--hidden pswp__single-tap">
+        <div class="pswp__share-tooltip">
+        </div>
+      </div>
+      <button class="pswp__button pswp__button--arrow--left" title="Previous (arrow left)">
+      </button>
+      <button class="pswp__button pswp__button--arrow--right" title="Next (arrow right)">
+      </button>
+      <div class="pswp__caption">
+        <div class="pswp__caption__center">
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+
+  <script src="https://cdn.jsdelivr.net/npm/vue/dist/vue.min.js"></script>
+  <script src="https://cdn.jsdelivr.net/gh/jinqimu/jinqimu.github.io/media/scripts/main.js"></script>
+  
+  <!-- Code Highlight -->
+  
+    <script src="https://cdn.jsdelivr.net/gh/jinqimu/jinqimu.github.io/media/prism.js"></script>
+    <script>
+      Prism.highlightAll()
+    </script>
+  
+
+  <script src="https://cdn.jsdelivr.net/npm/photoswipe@4.1.3/dist/photoswipe.min.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/photoswipe@4.1.3/dist/photoswipe-ui-default.min.js"></script>
+  <script>
+    //拿到预览框架，也就是上面的html代码
+    var pswpElement = document.querySelectorAll('.pswp')[0];
+    //定义图片数组变量
+    var imgitems;
+    /**
+    * 用于显示预览界面
+    * @param index 图片数组下标
+    */
+    function viewImg(index) {
+      //其它选项这里不做过多阐述，详情见官网
+      var pswpoptions = {
+        index: parseInt(index, 10), // 开始幻灯片索引。0是第一张幻灯片。必须是整数，而不是字符串。
+        bgOpacity: 0.7, // 背景透明度，0-1
+        maxSpreadZoom: 3, // 缩放级别，不要太大
+      };
+      //初始化并打开PhotoSwipe，pswpElement对应上面预览框架，PhotoSwipeUI_Default为皮肤，imgitems为图片数组，pswpoptions为选项
+      var gallery = new PhotoSwipe(pswpElement, PhotoSwipeUI_Default, imgitems, pswpoptions);
+      gallery.init()
+    }
+    /**
+    * 用于添加图片点击事件
+    * @param img 图片元素
+    * @param index 所属下标（在imgitems中的位置）
+    */
+    function addImgClick(img, index) {
+      img.onclick = function() {
+        viewImg(index)
+      }
+    }
+    /**
+    * 轮询所有图片，获取src、width、height等数据，加入imgitems，并给图片元素添加事件
+    * 最好在onload中执行该方法，本站因放在最底部，所以直接初始化
+    * 异步加载图片可在图片元素创建完成后调用此方法
+    */
+    function initImg() {
+      //重置图片数组
+      imgitems = [];
+      //查找class:markdown 下的所有img元素并遍历
+      var imgs = document.querySelectorAll('.markdown img');
+      for (var i = 0; i < imgs.length; i++) {
+        var img = imgs[i];
+        //本站相册初始为loading图片，真实图片放在data-src
+        var ds = img.getAttribute("data-src");
+        //创建image对象，用于获取图片宽高
+        var imgtemp = new Image();
+        //判断是否存在data-src
+        if (ds != null && ds.length > 0) {
+          imgtemp.src = ds
+        } else {
+          imgtemp.src = img.src
+        }
+        //判断是否存在缓存
+        if (imgtemp.complete) {
+          var imgobj = {
+            "src": imgtemp.src,
+            "w": imgtemp.width,
+            "h": imgtemp.height,
+          };
+          imgitems[i] = imgobj;
+          addImgClick(img, i);
+        } else {
+          console.log('进来了2')
+          imgtemp.index = i;
+          imgtemp.img = img;
+          imgtemp.onload = function() {
+            var imgobj = {
+              "src": this.src,
+              "w": this.width,
+              "h": this.height,
+            };
+            //不要使用push，因为onload前后顺序会不同
+            imgitems[this.index] = imgobj
+            //添加点击事件
+            addImgClick(this.img, this.index);
+          }
+        }
+      }
+    }
+    //初始化
+    initImg();
+  </script>
+  <script type="application/javascript" src="https://cdn.jsdelivr.net/gh/jinqimu/jinqimu.github.io/media/scripts/valine.min.js"></script>
+  <script type="application/javascript">
+  
+    var valine = new Valine();
+    valine.init({
+      el: '#vlaine-comment',
+      appId: 'QyvdpawObFVXfioRTKxDoGEM-gzGzoHsz',
+      appKey: 'dnugoyelJhfDydwMqSkOgx2c',
+      notify: true,
+      avatar: 'mp',
+      verify: true,
+      placeholder: '来都来了，不妨评论一下',
+      visitor: true,
+      highlight: true,
+      recordIP: true,
+    })
+  
+    // var valine = new Valine();
+    // valine.init({
+    //   el: '#vlaine-comment',
+    //   appId: 'QyvdpawObFVXfioRTKxDoGEM-gzGzoHsz',
+    //   appKey: 'dnugoyelJhfDydwMqSkOgx2c',
+    //   notify: false,
+    //   verify: false,
+    //   visitor: true,
+    //   avatar: 'mp',
+    //   placeholder: '加入讨论...'
+    // })
+  </script>
+
+  <!-- 已有vue完整版 -->
+  <!-- <script src="https://cdn.jsdelivr.net/npm/vue/dist/vue.runtime.min.js"></script> -->
+  <!-- <script src="https://cdn.jsdelivr.net/npm/vssue/dist/vssue.github.min.js"></script>
+  <script>
+    // 这里填vssue的js
+  </script> -->
+
+  <script>
+    // 加入豆瓣条目api，感谢https://immmmm.com/post-show-douban-item/
+    jQuery(document).ready(function ($) {
+      $("a[href*='douban']").each(function () {
+        var _this = $(this);
+        var str = _this.attr("href");
+        var db_reg = /^https\:\/\/(movie|book)\.douban\.com\/subject\/([0-9]+)\/?/;
+        if (db_reg.test(str)) {
+          var db_type = str.replace(db_reg, "$1");
+          var db_id = str.replace(db_reg, "$2").toString();
+          var db_api = "https://bm.weajs.com/api/";
+          if (db_type == 'movie') {
+            var url = db_api + "movies/" + db_id + "/";
+            $.ajax({
+              url: url,
+              type: 'GET',
+              dataType: "json",
+              success: function (data) {
+                var db_star = Math.ceil(data.rating);
+                $("<div class='post-preview'><div class='post-preview--meta'><div class='post-preview--middle'><h4 class='post-preview--title'><a target='_blank' href='" + str + "'>《" + data.title + "》</a></h4><div class='rating'><div class='rating-star allstar" + db_star + "'></div><div class='rating-average'>" + data.rating + "</div></div><time class='post-preview--date'>导演：" + data.directors + " / 类型：" + data.genres + " / " + data.pubdate + "</time><section style='max-height:75px;overflow:hidden;' class='post-preview--excerpt'>" + data.intro + "</section></div></div><img class='post-preview--image' src=" + data.cover + "></div>").replaceAll(_this)
+              }
+            });
+          } else if (db_type == 'book') {
+            var url = db_api + "books/" + db_id;
+            $.ajax({
+              url: url,
+              type: 'GET',
+              dataType: 'json',
+              success: function (data) {
+                var db_star = Math.ceil(data.rating);
+                $("<div class='post-preview'><div class='post-preview--meta'><div class='post-preview--middle'><h4 class='post-preview--title'><a target='_blank' href='" + str + "'>《" + data.title + "》</a></h4><div class='rating'><div class='rating-star allstar" + db_star + "'></div><div class='rating-average'>" + data.rating + "</div></div><time class='post-preview--date'>作者：" + data.author + " </time><section style='max-height:75px;overflow:hidden;' class='post-preview--excerpt'>" + data.intro + "</section></div></div><img class='post-preview--image' src=" + data.cover + "></div>").replaceAll(_this)
+              }
+            });
+          } else {
+            console.log("出错" + id)
+          }
+        }
+      });
+    });
+  </script>
+</body>
+
+</html>

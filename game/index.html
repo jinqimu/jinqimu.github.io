@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>五子棋</title>
+    <link rel="stylesheet" href="./wuziqi.css">
+</head>
+<body>
+    <header>
+        <nav>
+            <button class="bor button" onclick="restart()">重来</button>
+            <button class="bor button hidden" onclick="back()">悔棋</button>
+        </nav>
+    </header>
+    <section>
+        <canvas class="bor" id="qipan" onclick="luozi(event)" height="600px" width="600px"></canvas>
+    </section>
+    <footer>
+        <div class="bor record hidden" id="qwe" style="margin: 0 154px 0 0; opacity: 0.9;">白方执子</div>
+        <div class="bor record" style="background-color: black; color: white; margin: 0 0 0 166px; opacity: 0.9;">黑方执子</div> 
+    </footer>    
+</body>
+<script src="./js/homework.js"></script>
+</html>
