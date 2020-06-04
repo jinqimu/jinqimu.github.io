@@ -2,7 +2,7 @@
 <feed xmlns="http://www.w3.org/2005/Atom">
     <id>https://jinqimu.xyz</id>
     <title>JQM&apos;s site</title>
-    <updated>2020-06-04T12:19:41.398Z</updated>
+    <updated>2020-06-04T12:20:08.188Z</updated>
     <generator>https://github.com/jpmonette/feed</generator>
     <link rel="alternate" href="https://jinqimu.xyz"/>
     <link rel="self" href="https://jinqimu.xyz/atom.xml"/>
@@ -10,15 +10,6 @@
     <logo>https://jinqimu.xyz/images/avatar.png</logo>
     <icon>https://jinqimu.xyz/favicon.ico</icon>
     <rights>All rights reserved 2020, JQM&apos;s site</rights>
-    <entry>
-        <title type="html"><![CDATA[DIARY 2020年6月]]></title>
-        <id>https://jinqimu.xyz/post/diary-2020-nian-6-yue/</id>
-        <link href="https://jinqimu.xyz/post/diary-2020-nian-6-yue/">
-        </link>
-        <updated>2020-06-04T12:19:23.000Z</updated>
-        <content type="html"><![CDATA[<figure data-type="image" tabindex="1"><img src="https://cdn.jsdelivr.net/gh/jinqimu/cloudimg/img/20200604201605.png" alt="" loading="lazy"></figure>
-]]></content>
-    </entry>
     <entry>
         <title type="html"><![CDATA[有光荣无梦想，有梦想无光荣]]></title>
         <id>https://jinqimu.xyz/post/you-guang-rong-wu-meng-xiang-you-meng-xiang-wu-guang-rong/</id>
