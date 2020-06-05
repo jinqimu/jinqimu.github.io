@@ -2,7 +2,7 @@
 <feed xmlns="http://www.w3.org/2005/Atom">
     <id>https://jinqimu.xyz</id>
     <title>JQM&apos;s site</title>
-    <updated>2020-06-05T09:11:40.868Z</updated>
+    <updated>2020-06-05T10:12:21.814Z</updated>
     <generator>https://github.com/jpmonette/feed</generator>
     <link rel="alternate" href="https://jinqimu.xyz"/>
     <link rel="self" href="https://jinqimu.xyz/atom.xml"/>
@@ -37,7 +37,18 @@
         <link href="https://jinqimu.xyz/post/diary-2020-nian-6-yue/">
         </link>
         <updated>2020-06-04T12:20:58.000Z</updated>
-        <content type="html"><![CDATA[<figure data-type="image" tabindex="1"><img src="https://cdn.jsdelivr.net/gh/jinqimu/cloudimg/img/20200604201605.png" alt="" loading="lazy"></figure>
+        <content type="html"><![CDATA[<ul>
+<li>
+<h2 id="2020年6月5日"><strong>2020年6月5日</strong></h2>
+</li>
+</ul>
+<p>发布了<s>自动增加逼格</s>的<strong>APF</strong>，<a href="https://github.com/jinqimu/AddPhotoFrame/releases">GitHub地址</a>，预览版</p>
+<ul>
+<li>
+<h2 id="2020年6月2日"><strong>2020年6月2日</strong></h2>
+</li>
+</ul>
+<figure data-type="image" tabindex="1"><img src="https://cdn.jsdelivr.net/gh/jinqimu/cloudimg/img/20200604201605.png" alt="" loading="lazy"></figure>
 ]]></content>
     </entry>
     <entry>
