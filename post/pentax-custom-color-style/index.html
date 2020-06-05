@@ -358,19 +358,22 @@
   <script type="application/javascript" src="https://cdn.jsdelivr.net/gh/jinqimu/jinqimu.github.io/media/scripts/valine.min.js"></script>
   <script type="application/javascript">
   
-    var valine = new Valine();
-    valine.init({
-      el: '#vlaine-comment',
-      appId: '14KBIUh2Q9TsVoWDp36ol06W-MdYXbMMI',
-      appKey: 'pnqJW6dgB8GsOIkCEX5RIEys',
-      notify: true,
-      avatar: 'mp',
-      verify: true,
-      placeholder: '来都来了，不妨评论一下',
-      visitor: true,
-      highlight: true,
-      recordIP: true,
-    })
+    if(!document.getElementById('artitalk')) {
+      var valine = new Valine();
+      valine.init({
+        el: '#vlaine-comment',
+        appId: '14KBIUh2Q9TsVoWDp36ol06W-MdYXbMMI',
+        appKey: 'pnqJW6dgB8GsOIkCEX5RIEys',
+        notify: true,
+        avatar: 'mp',
+        verify: true,
+        placeholder: '来都来了，不妨评论一下',
+        visitor: true,
+        highlight: true,
+        recordIP: true,
+      })
+    }
+    
   
     // var valine = new Valine();
     // valine.init({
