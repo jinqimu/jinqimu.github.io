@@ -75,47 +75,51 @@
     <img src="" alt="" id="img" width="400" style="margin: 100px auto; display: block;">
     <canvas id="canvas" width="1242px" height="2208px" style="display: none;"></canvas>
     <div>
-        <img id="source" src="./source/background.png" style="display: none;">
+        <img id="background1" src="source/background1.png" style="display: none;">
+        <img id="background2" src="source/background2.png" style="display: none;">
     </div>
 </body>
 <script>
     input = document.getElementById("upload");
     var img1 = document.getElementById("img");
-    
+    var bg1 = document.getElementById("background1");
+    var bg2 = document.getElementById("background2");
+
     input.addEventListener('change', function (params) {
             console.log(typeof(input.files[0]));
             file = input.files[0];
-            // .src = input.files[0]; 
             if (window.FileReader) {
                 var reader = new FileReader();
                 
                 reader.onload = function (e) {
-                    // img.src = e.target.result;
                     image = e.target.result;
                     var can = document.getElementById("canvas");
                     
-
                     var ctx = can.getContext('2d');
                     var img = new Image();
                                
                     img.onload = function() {
-                        console.log(img.width);
-                        // can.width = img.width;
-                        // can.height = img.height;
-                        ctx.drawImage(document.getElementById("source"), 0, 0);
-                        // ctx.save();
-                        // ctx.scale(Math.min(1242/img.width, 2280/img.height), Math.min(1242 / img.width, 2280 / img.height));
-                        ctx.drawImage(img, 0, 270, 1242, img.height*1242/img.width);
-                        // ctx.scale(1, 1);
-                        // stx.restore();
+                        console.log(img.width, img.height);
+                        if(img.width<img.height) {
+                            can.setAttribute("width", "2208px");
+                            can.setAttribute("height", "1242px");
+                            // bg.src = "/source/background2.png";
+                            // bg.onload = function() {
+                                ctx.drawImage(bg2, 0, 0);
+                                ctx.drawImage(img, 160, 0, img.width*1242/img.height, 1242);
+                            // }
+                        } else {
+                            can.setAttribute("width", "1242px");
+                            can.setAttribute("height", "2208px");
+                            // bg.src = "/source/background1.png";
+                            // bg.onload = function () {
+                                ctx.drawImage(bg1, 0, 0);
+                                ctx.drawImage(img, 0, 270, 1242, img.height*1242/img.width);
+                            // }
+                        }
                         img1.src = can.toDataURL('image/png');
                     }
                     img.src = image;
-
-                    
-                    // img1.src = "https://cdn.jsdelivr.net/gh/jinqimu/cloudimg/img/20200505221658.jpg";
-                    // img1.width = "300";
-                    
                 }
                 reader.readAsDataURL(file);
             }
