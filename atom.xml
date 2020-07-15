@@ -2,7 +2,7 @@
 <feed xmlns="http://www.w3.org/2005/Atom">
     <id>https://jinqimu.xyz</id>
     <title>JQM&apos;s site</title>
-    <updated>2020-06-22T12:33:39.126Z</updated>
+    <updated>2020-07-15T11:26:46.187Z</updated>
     <generator>https://github.com/jpmonette/feed</generator>
     <link rel="alternate" href="https://jinqimu.xyz"/>
     <link rel="self" href="https://jinqimu.xyz/atom.xml"/>
@@ -26,8 +26,7 @@
     var appID="LJ8LumOvxtWYgxXO9YhP4oww-MdYXbMMI";
     var appKEY="1Y0VEcy1ER5xtQkHz23XxmJT";
     </script>
-    <div id="lazy"></div>
-    <div id="artitalk"></div>
+    <div id="artitalk_main"></div>
     <script type="text/javascript" src="https://unpkg.com/artitalk"></script>
 </body>]]></content>
     </entry>
