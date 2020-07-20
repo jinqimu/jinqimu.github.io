@@ -86,7 +86,7 @@ input = document.getElementById("upload");
                         ctx.fillStyle = "white";
                         // _Model
                         text = _Model || "--";
-                        const DUBAI_BOLD = new FontFace('DUBAI_BOLD', 'url(./source/DUBAI_BOLD.TTF)');
+                        const DUBAI_BOLD = new FontFace('DUBAI_BOLD', 'url(https://cdn.jsdelivr.net/gh/jinqimu/jinqimu.github.io/apf/source/DUBAI_BOLD.TTF)');
                         await DUBAI_BOLD.load();
                         document.fonts.add(DUBAI_BOLD);
                         ctx.font = "52px DUBAI_BOLD";
@@ -97,7 +97,7 @@ input = document.getElementById("upload");
                         // _LensModel
                         ctx.fillStyle = "#848484";
                         text = _LensModel || "----";
-                        const ARIALN = new FontFace('ARIALN', 'url(./source/ARIALN.TTF)');
+                        const ARIALN = new FontFace('ARIALN', 'url(https://cdn.jsdelivr.net/gh/jinqimu/jinqimu.github.io/apf/source/ARIALN.TTF)');
                         await ARIALN.load();
                         document.fonts.add(ARIALN);
                         ctx.font = "44px ARIALN";
@@ -110,7 +110,7 @@ input = document.getElementById("upload");
                         // params
                         ctx.fillStyle = "white";
                         text = _ISO || "--";
-                        const Sony_Sketch_EF = new FontFace('Sony_Sketch_EF', 'url(./source/Sony_Sketch_EF.ttf)');
+                        const Sony_Sketch_EF = new FontFace('Sony_Sketch_EF', 'url(https://cdn.jsdelivr.net/gh/jinqimu/jinqimu.github.io/apf/source/Sony_Sketch_EF.ttf)');
                         await Sony_Sketch_EF.load();
                         document.fonts.add(Sony_Sketch_EF);
                         ctx.font = "40px Sony_Sketch_EF"
