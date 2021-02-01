@@ -2,7 +2,7 @@
 <feed xmlns="http://www.w3.org/2005/Atom">
     <id>https://jinqimu.xyz</id>
     <title>JQM&apos;s site</title>
-    <updated>2021-02-01T08:21:04.314Z</updated>
+    <updated>2021-02-01T08:35:37.908Z</updated>
     <generator>https://github.com/jpmonette/feed</generator>
     <link rel="alternate" href="https://jinqimu.xyz"/>
     <link rel="self" href="https://jinqimu.xyz/atom.xml"/>
@@ -49,10 +49,10 @@
 <li>
 <p>配置 <em>设置</em> ：</p>
 <ul class="contains-task-list">
-<li class="task-list-item"><input class="task-list-item-checkbox" checked="" disabled="" type="checkbox" id="task-item-3090766"><label class="task-list-item-label" for="task-item-3090766"> 锁定WiFi</label></li>
-<li class="task-list-item"><input class="task-list-item-checkbox" checked="" disabled="" type="checkbox" id="task-item-2760602"><label class="task-list-item-label" for="task-item-2760602"> CPU唤醒</label></li>
-<li class="task-list-item"><input class="task-list-item-checkbox" checked="" disabled="" type="checkbox" id="task-item-8233651"><label class="task-list-item-label" for="task-item-8233651"> 开机自启动</label></li>
-<li class="task-list-item"><input class="task-list-item-checkbox" checked="" disabled="" type="checkbox" id="task-item-798751"><label class="task-list-item-label" for="task-item-798751"> HTTP</label></li>
+<li class="task-list-item"><input class="task-list-item-checkbox" checked="" disabled="" type="checkbox" id="task-item-479402"><label class="task-list-item-label" for="task-item-479402"> 锁定WiFi</label></li>
+<li class="task-list-item"><input class="task-list-item-checkbox" checked="" disabled="" type="checkbox" id="task-item-6526688"><label class="task-list-item-label" for="task-item-6526688"> CPU唤醒</label></li>
+<li class="task-list-item"><input class="task-list-item-checkbox" checked="" disabled="" type="checkbox" id="task-item-765791"><label class="task-list-item-label" for="task-item-765791"> 开机自启动</label></li>
+<li class="task-list-item"><input class="task-list-item-checkbox" checked="" disabled="" type="checkbox" id="task-item-8939"><label class="task-list-item-label" for="task-item-8939"> HTTP</label></li>
 </ul>
 </li>
 <li>
@@ -72,7 +72,7 @@
 </li>
 <li>
 <p>授予网络组权限</p>
-<pre><code class="language-bash">sudo usermod -G 3003 root 
+<pre><code class="language-bash">sudo usermod -G 3003 root
 </code></pre>
 </li>
 </ol>
