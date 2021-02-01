@@ -363,19 +363,21 @@ li {
   <script type="application/javascript">
   
     if(!document.getElementById('artitalk_main')) {
-      var valine = new Valine();
-      valine.init({
-        el: '#vlaine-comment',
-        appId: '14KBIUh2Q9TsVoWDp36ol06W-MdYXbMMI',
-        appKey: 'pnqJW6dgB8GsOIkCEX5RIEys',
-        notify: true,
-        avatar: 'mp',
-        verify: true,
-        placeholder: '来都来了，不妨评论一下',
-        visitor: true,
-        highlight: true,
-        recordIP: true,
-      })
+      if(false){
+        var valine = new Valine();
+        valine.init({
+          el: '#vlaine-comment',
+          appId: '14KBIUh2Q9TsVoWDp36ol06W-MdYXbMMI',
+          appKey: 'pnqJW6dgB8GsOIkCEX5RIEys',
+          notify: true,
+          avatar: 'mp',
+          verify: true,
+          placeholder: '来都来了，不妨评论一下',
+          visitor: true,
+          highlight: true,
+          recordIP: true,
+        })
+      }
     }
     
   
