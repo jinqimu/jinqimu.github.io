@@ -1,0 +1,36 @@
+ol>li::before {
+    position: absolute;
+    top: 0;
+    left: 0;
+    margin-top: 1px;
+    display: -webkit-box;
+    display: flex;
+    -webkit-box-align: center;
+    align-items: center;
+    -webkit-box-pack: center;
+    justify-content: center;
+    height: 1.5rem;
+    width: 1.5rem;
+    background-color: #c3dafe;
+    border-radius: 9999px;
+    color: #3c366b;
+    font-size: .75rem;
+    font-weight: 700;
+    content: counter(item);
+    counter-increment: item;
+}
+
+ol>li {
+    position: relative;
+    padding-left: 2.5rem;
+}
+
+@media (prefers-color-scheme: dark)
+ol>li::before {
+    background-color: #5a67d8;
+    color: #EAEAEA;
+}
+
+ol>*+*, ul>*+* {
+    margin-top: 1rem;
+}
