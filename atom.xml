@@ -2,14 +2,33 @@
 <feed xmlns="http://www.w3.org/2005/Atom">
     <id>https://jinqimu.xyz</id>
     <title>JQM&apos;s site</title>
-    <updated>2020-08-14T03:47:20.881Z</updated>
+    <updated>2021-02-01T06:02:02.832Z</updated>
     <generator>https://github.com/jpmonette/feed</generator>
     <link rel="alternate" href="https://jinqimu.xyz"/>
     <link rel="self" href="https://jinqimu.xyz/atom.xml"/>
     <subtitle>潘岳陆机赋何在？长江自水天下流。&lt;/br&gt;&lt;i&gt;&lt;small&gt;有问题请邮件联系&lt;/small&gt;&lt;/i&gt;</subtitle>
     <logo>https://jinqimu.xyz/images/avatar.png</logo>
     <icon>https://jinqimu.xyz/favicon.ico</icon>
-    <rights>All rights reserved 2020, JQM&apos;s site</rights>
+    <rights>All rights reserved 2021, JQM&apos;s site</rights>
+    <entry>
+        <title type="html"><![CDATA[使用废旧安卓手机制作公网Linux服务器]]></title>
+        <id>https://jinqimu.xyz/post/shi-yong-fei-jiu-an-zhuo-shou-ji-zhi-zuo-gong-wang-ubuntu-fu-wu-qi/</id>
+        <link href="https://jinqimu.xyz/post/shi-yong-fei-jiu-an-zhuo-shou-ji-zhi-zuo-gong-wang-ubuntu-fu-wu-qi/">
+        </link>
+        <updated>2021-02-01T04:46:20.000Z</updated>
+        <content type="html"><![CDATA[<h3 id="前置条件">前置条件</h3>
+<ul>
+<li>废旧Android手机（取得root权限，Android版本应该需要在4以上）</li>
+<li>支持 <em>IPV6</em> 的路由器（不支持 <em>IPV6</em> 详见）</li>
+<li>一个有效域名</li>
+</ul>
+<h3 id="准备工作">准备工作</h3>
+<ul>
+<li><a href="https://github.com/meefik/linuxdeploy/releases/">Linux Deploy</a> 因为我的手机是32位的，我安装了v2.5.1，按需自取</li>
+<li>Linux镜像文件<img src="https://cdn.jsdelivr.net/gh/jinqimu/cloudimg/img/20210201134839.png" alt="" loading="lazy"></li>
+</ul>
+]]></content>
+    </entry>
     <entry>
         <title type="html"><![CDATA[artitalk]]></title>
         <id>https://jinqimu.xyz/post/artitalk/</id>
@@ -25,9 +44,10 @@
     <script>
     var appID="LJ8LumOvxtWYgxXO9YhP4oww-MdYXbMMI";
     var appKEY="1Y0VEcy1ER5xtQkHz23XxmJT";
+    var dark_mode=1;
     </script>
     <div id="artitalk_main"></div>
-    <script type="text/javascript" src="https://unpkg.com/artitalk"></script>
+    <script type="text/javascript" src="/artitalk.js"></script>
 </body>]]></content>
     </entry>
     <entry>
