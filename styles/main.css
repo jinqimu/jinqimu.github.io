@@ -124,6 +124,6 @@ a:not([class]):hover {
 .markdown figure img {margin: 0 auto;}
 li {
     position: relative;
-    padding-left: 2.5rem;
+    padding-left: 0.5rem;
 }
     
