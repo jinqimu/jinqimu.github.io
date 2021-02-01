@@ -4,48 +4,14 @@
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <meta http-equiv="X-UA-Compatible" content="ie=edge">
 <title>JQM&#39;s site</title>
-<link rel="shortcut icon" href="https://cdn.jsdelivr.net/gh/jinqimu/jinqimu.github.io/favicon.ico">
+<link rel="shortcut icon" href="https://jinqimu.xyz/favicon.ico">
 <link href="https://cdn.jsdelivr.net/npm/remixicon@2.2.0/fonts/remixicon.css" rel="stylesheet">
-<!-- <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/animate.css@3.7.2/animate.min.css"> -->
-<!-- <link rel="stylesheet" href="https://jinqimu.xyz/media/css/tailwind.css"> -->
-<link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/jinqimu/jinqimu.github.io/media/css/tailwind.css">
-<link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/jinqimu/jinqimu.github.io/styles/main.css">
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/animate.css@3.7.2/animate.min.css">
+<link rel="stylesheet" href="https://jinqimu.xyz/media/css/tailwind.css">
+<link rel="stylesheet" href="https://jinqimu.xyz/styles/main.css">
 <link rel="alternate" type="application/atom+xml" title="JQM&#39;s site - Atom Feed" href="https://jinqimu.xyz/atom.xml">
-<!-- Vssue 的样式文件 -->
-<link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/meteorlxy/vssue/packages/vssue/dist/vssue.min.css">
-
-<meta name="google-site-verification" content="M2dMC3JHR6GqgIFxOWbHJwQPXyhSRTTzdrBGg28Ie-M" />
-<meta name="google-site-verification" content="AzaPOFn8x82yt0rrTak8Hh4lis5fOM9xw57Tyg-mw_E" />
-<meta name="baidu-site-verification" content="LObsyZAOkl" />
 
     
-
-<style>
-  /* html {filter: grayscale(1);} */
-.markdown figure {display: block;}
-.markdown figure img {margin: 0 auto;}
-</style>
-
-
-<script src="https://apps.bdimg.com/libs/jquery/2.1.4/jquery.min.js">
-</script>
-<meta name="referrer" content="never">
-<style>
-  .post-preview{max-width:580px;height:210px;margin:1em auto;position:relative;display:flex;background:floralwhite;border-radius:4px;box-shadow:0 1px 2px rgba(0,0,0,.25),0 0 1px rgba(0,0,0,.25);}
-  .post-preview--meta{width:75%;padding:25px;overflow:hidden;}
-  .post-preview--middle {line-height:28px;}
-  .post-preview--title {font-size:18px;margin:0!important;}
-  .post-preview--title a{text-decoration:none;}
-  .post-preview--date{font-size:14px;color:#999;}
-  .post-preview--excerpt{font-size:14px;line-height:1.825;}
-  .post-preview--excerpt p{margin-bottom:0;}  
-  .post-preview--image {height:210px!important;width:auto;float:right;border-top-right-radius: 2px!important;border-bottom-right-radius:2px!important;border-top-left-radius:0!important;border-bottom-left-radius:0!important;}
-  @media (max-width:550px) {.post-preview {width:95%;height: 180px;}.post-preview--image{height: 180px!important;}.post-preview--excerpt{display:none;}/*.post-preview--middle {line-height:19px;}*/}
-  .rating{display:block;line-height:15px;}.rating-star{display:inline-block;width:75px;height:15px;background-repeat:no-repeat;background-image:url(data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAEsAAAClCAYAAAAUAAAYAAAAGXRFWHRTb2Z0d2FyZQBBZG9iZSBJbWFnZVJlYWR5ccllPAAAA5xJREFUeNrs3T9rFEEcxvG7qEQIglaCICKkin9AUEtBKxU7wS61VlYivgWj70TtNFj5BqzE7qxEWwsxKIoYn4UtluFmbm8nczvzm+/BjxyuDwNzu3uXD0+46f7LC5PA45Hm+WTYw1x2LRDc0jzTXB+wqMlsaLPutz8fDFjYZHYauAz3NBvt83XNnyUWNpn1nVm3OsHmsb3EomazzZnVXKMPNcc0xzUnNKc0Rzv/77fms+Z7O3vt9b1eU7bZrNN68l5zcolX4ofmsuZXTdnmMvyi2dR86Bmcac62P6vKrnVubpc0bxYE32nOab45N8YqsvPeDfcD4SOav4HjprPuu+H5BTt9LXDMfNbdLPfT678Fx6vKupt1o/O8+R3pkOaJ5/iktqx7z/qp+aq5q/nY+fczmheaK03Gs7D5rLtZdzSvA6/Ebc2u55j57HQB0TzW7AzkjiKzny6+2hlKNE8juMNcFqKBaIZndRlCNBBNgmx7ZkE0fbLtZkE0EA1EM17WuQwhGogGooFoss6296y52cNO+J6HLJoPaFdbsvA9zGerIxrPh85eWYgGooFoDiQbuAxp0UA0EVmdWbRo+ma1WbRoIBqIZtzsnHdDWjQQDUQD0WSbde5ZS2UhmtqJJtSEiVkXooFoIJre2VATJmZdiKZ2ogk1YSb8oVMvDeUPnSAaiCaPJkzMuhANRAPRQDQpsqEmTMy6EI11oolpwkA0EA1EcyDZmCYMRAPR+LMxTZjqiCamCQPRQDQQzehNGIgGooFoIJpVZ2OaMBBN7USTqgkD0UA0EE3vbKomDERTO9GkasKYJJpUTRiIBqKBaEZvwkA0EA1EA9GkyKZqwkA01olmrCYMRAPRQDR9LkO+0QmiKbAJUyTRjNWEgWggGohm9CYMRAPRQDQQzZDsWE0YiMYC0eTYhIFoIJrKiCbHJgxEY4FocmzCZEs0OTZhIBqIpjKiybEJA9FANBANROPL5tiEgWhKIJoSmzAQDURjjGhKbMJANCUQTYlNmNGIpsQmDEQD0RgjmhKbMBANRAPR1Es0JTZhIJpciMZaEwaigWgKJBprTRiIJheisdaESUo01powEA1EUyDRWGvCQDQQDURjm2isNWEgmlURzWw2q4pZIBqIJkOiCVyGJpkFolkV0ejMMvel28mIRptl7ku3IRqIpjCimfNuaJpZIBqIBqIpm2ice5Z5ZonJupvVkMRu4JW4qXnrOWY++1+AAQBw9BJSCTeN9wAAAABJRU5ErkJggg==);overflow:hidden; margin-top: 5px;}.allstar10{background-position:0px 0px;}.allstar9{background-position:0px -15px;}.allstar8{background-position:0px -30px;}.allstar7{background-position:0px -45px;}.allstar6{background-position:0px -60px;}.allstar5{background-position:0px -75px;}.allstar4{background-position:0px -90px;}.allstar3{background-position:0px -105px;}.allstar2{background-position:0px -120px;}.allstar1{background-position:0px -135px;}.allstar0{background-position:0px -150px;}.rating-average{color:#777;display:inline-block;font-size:13px;margin-left:10px;}
-  @media (prefers-color-scheme: dark) {
-    .post-preview{background: #3b3d42;}
-  }
-</style>
 
   <meta name="description" content="潘岳陆机赋何在？长江自水天下流。</br><i><small>有问题请邮件联系</small></i>" />
 </head>
@@ -107,60 +73,9 @@
     </div>
     
     
-      <div class="mt-8 flex items-center">
-        
-          <div class="text-gray-500 mr-2">
-            Follow me 👉
-          </div>
-        
-        
-          
-        
-          
-            
-              <a href="mailto:jinqimu@outlook.com" target="_blank" class="mr-2 w-8 h-8 inline-flex items-center justify-center text-xl hover:bg-gray-200 dark:hover:bg-gray-600 transition-fast">
-                <i class="ri-mail-line"></i>
-              </a>
-            
-          
-        
-          
-            
-              <a href="https://github.com/jinqimu" target="_blank" class="mr-2 w-8 h-8 inline-flex items-center justify-center text-xl hover:bg-gray-200 dark:hover:bg-gray-600 transition-fast">
-                <i class="ri-github-line"></i>
-              </a>
-            
-          
-        
-          
-        
-          
-            
-              <a href="https://weibo.com/u/5830009145" target="_blank" class="mr-2 w-8 h-8 inline-flex items-center justify-center text-xl hover:bg-gray-200 dark:hover:bg-gray-600 transition-fast">
-                <i class="ri-weibo-line"></i>
-              </a>
-            
-          
-        
-          
-        
-          
-        
-          
-        
-          
-        
-          
-        
-          
-        
-          
-        
-      </div>
-    
   </div>
   <div class="md:mx-8 flex-shrink-0 self-start rounded-full border-4 border-dotted border-transparent hover:border-yellow-50 p-2 w-32 h-32 order-1 md:order-2 mx-auto s3-dotted">
-    <img class="rounded-full object-cover" src="https://cdn.jsdelivr.net/gh/jinqimu/jinqimu.github.io/images/avatar.png?v=1612159320962" alt="JQM&#39;s site" width="100%" height="100%">
+    <img class="rounded-full object-cover" src="https://jinqimu.xyz/images/avatar.png?v=1612167267980" alt="JQM&#39;s site" width="100%" height="100%">
   </div>
 </header>
       
@@ -188,7 +103,7 @@
 Linux Deploy 因为我的手机是32位的，我安装了v2.5....
       </div>
       <a href="https://jinqimu.xyz/post/shi-yong-fei-jiu-an-zhuo-shou-ji-zhi-zuo-gong-wang-ubuntu-fu-wu-qi/" class="btn">
-        Read more
+        阅读更多
       </a>
     </div>
     
@@ -208,7 +123,7 @@ Linux Deploy 因为我的手机是32位的，我安装了v2.5....
 
       </div>
       <a href="https://jinqimu.xyz/post/artitalk/" class="btn">
-        Read more
+        阅读更多
       </a>
     </div>
     
@@ -239,7 +154,7 @@ Linux Deploy 因为我的手机是32位的，我安装了v2.5....
 ...
       </div>
       <a href="https://jinqimu.xyz/post/diary-2020-nian-6-yue/" class="btn">
-        Read more
+        阅读更多
       </a>
     </div>
     
@@ -263,7 +178,7 @@ Linux Deploy 因为我的手机是32位的，我安装了v2.5....
 为了在世界上消除战争，国际社会推出了一个“和平视窗”的计划，期望战争能以另一种较为无害的、尊重生命的方式进行，而奥运会则被选择为战争的替代物。西亚共和国一个因为战争长期被封...
       </div>
       <a href="https://jinqimu.xyz/post/you-guang-rong-wu-meng-xiang-you-meng-xiang-wu-guang-rong/" class="btn">
-        Read more
+        阅读更多
       </a>
     </div>
     
@@ -284,7 +199,7 @@ Linux Deploy 因为我的手机是32位的，我安装了v2.5....
 对终身伴侣的要求，正如对人生...
       </div>
       <a href="https://jinqimu.xyz/post/fu-lei-jia-shu-tan-yong-jiu-de-ban-lu/" class="btn">
-        Read more
+        阅读更多
       </a>
     </div>
     
@@ -317,7 +232,7 @@ Linux Deploy 因为我的手机是32位的，我安装了v2.5....
 写了H5小作业，DEMO_VIEW...
       </div>
       <a href="https://jinqimu.xyz/post/diary-2020-nian-5-yue/" class="btn">
-        Read more
+        阅读更多
       </a>
     </div>
     
@@ -337,7 +252,7 @@ Linux Deploy 因为我的手机是32位的，我安装了v2.5....
 
       </div>
       <a href="https://jinqimu.xyz/post/pentax-custom-color-style/" class="btn">
-        Read more
+        阅读更多
       </a>
     </div>
     
@@ -361,7 +276,7 @@ Linux Deploy 因为我的手机是32位的，我安装了v2.5....
 https:...
       </div>
       <a href="https://jinqimu.xyz/post/ji-cheng-dou-ban-jian-jie-dao-wang-ye-shang/" class="btn">
-        Read more
+        阅读更多
       </a>
     </div>
     
@@ -387,7 +302,7 @@ https:...
     </div>
   </div>
   <script src="https://cdn.jsdelivr.net/npm/vue/dist/vue.js"></script>
-  <script src="https://cdn.jsdelivr.net/gh/jinqimu/jinqimu.github.io/media/scripts/main.js"></script>
+  <script src="https://jinqimu.xyz/media/scripts/main.js"></script>
 </body>
 
 </html>
