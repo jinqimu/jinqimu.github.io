@@ -1,19 +1,19 @@
 <?xml version="1.0" encoding="utf-8"?>
 <feed xmlns="http://www.w3.org/2005/Atom">
-    <id>https://jinqimu.xyz</id>
+    <id>https://jinqimu.github.io</id>
     <title>JQM&apos;s site</title>
-    <updated>2021-03-10T08:48:39.670Z</updated>
+    <updated>2021-06-26T10:10:08.829Z</updated>
     <generator>https://github.com/jpmonette/feed</generator>
-    <link rel="alternate" href="https://jinqimu.xyz"/>
-    <link rel="self" href="https://jinqimu.xyz/atom.xml"/>
+    <link rel="alternate" href="https://jinqimu.github.io"/>
+    <link rel="self" href="https://jinqimu.github.io/atom.xml"/>
     <subtitle>潘岳陆机赋何在？长江自水天下流。&lt;/br&gt;&lt;i&gt;&lt;small&gt;有问题请邮件联系&lt;/small&gt;&lt;/i&gt;</subtitle>
-    <logo>https://jinqimu.xyz/images/avatar.png</logo>
-    <icon>https://jinqimu.xyz/favicon.ico</icon>
+    <logo>https://jinqimu.github.io/images/avatar.png</logo>
+    <icon>https://jinqimu.github.io/favicon.ico</icon>
     <rights>All rights reserved 2021, JQM&apos;s site</rights>
     <entry>
         <title type="html"><![CDATA[translation_预训练图像处理Transformer]]></title>
-        <id>https://jinqimu.xyz/post/translation_-yu-xun-lian-tu-xiang-chu-li-transformer/</id>
-        <link href="https://jinqimu.xyz/post/translation_-yu-xun-lian-tu-xiang-chu-li-transformer/">
+        <id>https://jinqimu.github.io/post/translation_-yu-xun-lian-tu-xiang-chu-li-transformer/</id>
+        <link href="https://jinqimu.github.io/post/translation_-yu-xun-lian-tu-xiang-chu-li-transformer/">
         </link>
         <updated>2021-03-10T08:33:52.000Z</updated>
         <content type="html"><![CDATA[<p>翻译了论文 <em>Pre-Trained Image Processing Transformer</em><br>
@@ -22,8 +22,8 @@
     </entry>
     <entry>
         <title type="html"><![CDATA[使用废旧安卓手机制作公网Linux服务器]]></title>
-        <id>https://jinqimu.xyz/post/shi-yong-fei-jiu-an-zhuo-shou-ji-zhi-zuo-gong-wang-ubuntu-fu-wu-qi/</id>
-        <link href="https://jinqimu.xyz/post/shi-yong-fei-jiu-an-zhuo-shou-ji-zhi-zuo-gong-wang-ubuntu-fu-wu-qi/">
+        <id>https://jinqimu.github.io/post/shi-yong-fei-jiu-an-zhuo-shou-ji-zhi-zuo-gong-wang-ubuntu-fu-wu-qi/</id>
+        <link href="https://jinqimu.github.io/post/shi-yong-fei-jiu-an-zhuo-shou-ji-zhi-zuo-gong-wang-ubuntu-fu-wu-qi/">
         </link>
         <updated>2021-02-01T04:46:20.000Z</updated>
         <content type="html"><![CDATA[<h3 id="前置条件">前置条件</h3>
@@ -59,10 +59,10 @@
 <li>
 <p>配置 <em>设置</em> ：</p>
 <ul class="contains-task-list">
-<li class="task-list-item"><input class="task-list-item-checkbox" checked="" disabled="" type="checkbox" id="task-item-994780"><label class="task-list-item-label" for="task-item-994780"> 锁定WiFi</label></li>
-<li class="task-list-item"><input class="task-list-item-checkbox" checked="" disabled="" type="checkbox" id="task-item-6571035"><label class="task-list-item-label" for="task-item-6571035"> CPU唤醒</label></li>
-<li class="task-list-item"><input class="task-list-item-checkbox" checked="" disabled="" type="checkbox" id="task-item-98503"><label class="task-list-item-label" for="task-item-98503"> 开机自启动</label></li>
-<li class="task-list-item"><input class="task-list-item-checkbox" checked="" disabled="" type="checkbox" id="task-item-7779782"> <b>HTTP<label class="task-list-item-label" for="task-item-7779782"> <b>HTTP</b></label></li>
+<li class="task-list-item"><input class="task-list-item-checkbox" checked="" disabled="" type="checkbox" id="task-item-3454450"><label class="task-list-item-label" for="task-item-3454450"> 锁定WiFi</label></li>
+<li class="task-list-item"><input class="task-list-item-checkbox" checked="" disabled="" type="checkbox" id="task-item-2906334"><label class="task-list-item-label" for="task-item-2906334"> CPU唤醒</label></li>
+<li class="task-list-item"><input class="task-list-item-checkbox" checked="" disabled="" type="checkbox" id="task-item-909438"><label class="task-list-item-label" for="task-item-909438"> 开机自启动</label></li>
+<li class="task-list-item"><input class="task-list-item-checkbox" checked="" disabled="" type="checkbox" id="task-item-1707481"> <b>HTTP<label class="task-list-item-label" for="task-item-1707481"> <b>HTTP</b></label></li>
 </ul>
 </li>
 <li>
@@ -99,8 +99,8 @@ sudo usermod -G 3003 root
     </entry>
     <entry>
         <title type="html"><![CDATA[artitalk]]></title>
-        <id>https://jinqimu.xyz/post/artitalk/</id>
-        <link href="https://jinqimu.xyz/post/artitalk/">
+        <id>https://jinqimu.github.io/post/artitalk/</id>
+        <link href="https://jinqimu.github.io/post/artitalk/">
         </link>
         <updated>2020-06-05T07:44:30.000Z</updated>
         <summary type="html"><![CDATA[<p>...</p>
@@ -120,8 +120,8 @@ sudo usermod -G 3003 root
     </entry>
     <entry>
         <title type="html"><![CDATA[DIARY 2020年6月]]></title>
-        <id>https://jinqimu.xyz/post/diary-2020-nian-6-yue/</id>
-        <link href="https://jinqimu.xyz/post/diary-2020-nian-6-yue/">
+        <id>https://jinqimu.github.io/post/diary-2020-nian-6-yue/</id>
+        <link href="https://jinqimu.github.io/post/diary-2020-nian-6-yue/">
         </link>
         <updated>2020-06-04T12:20:58.000Z</updated>
         <content type="html"><![CDATA[<ul>
@@ -140,8 +140,8 @@ sudo usermod -G 3003 root
     </entry>
     <entry>
         <title type="html"><![CDATA[有光荣无梦想，有梦想无光荣]]></title>
-        <id>https://jinqimu.xyz/post/you-guang-rong-wu-meng-xiang-you-meng-xiang-wu-guang-rong/</id>
-        <link href="https://jinqimu.xyz/post/you-guang-rong-wu-meng-xiang-you-meng-xiang-wu-guang-rong/">
+        <id>https://jinqimu.github.io/post/you-guang-rong-wu-meng-xiang-you-meng-xiang-wu-guang-rong/</id>
+        <link href="https://jinqimu.github.io/post/you-guang-rong-wu-meng-xiang-you-meng-xiang-wu-guang-rong/">
         </link>
         <updated>2020-05-22T14:44:00.000Z</updated>
         <content type="html"><![CDATA[<!-- more -->
@@ -157,8 +157,8 @@ sudo usermod -G 3003 root
     </entry>
     <entry>
         <title type="html"><![CDATA[傅雷家书  ——谈永久的伴侣]]></title>
-        <id>https://jinqimu.xyz/post/fu-lei-jia-shu-tan-yong-jiu-de-ban-lu/</id>
-        <link href="https://jinqimu.xyz/post/fu-lei-jia-shu-tan-yong-jiu-de-ban-lu/">
+        <id>https://jinqimu.github.io/post/fu-lei-jia-shu-tan-yong-jiu-de-ban-lu/</id>
+        <link href="https://jinqimu.github.io/post/fu-lei-jia-shu-tan-yong-jiu-de-ban-lu/">
         </link>
         <updated>2020-05-21T09:48:09.000Z</updated>
         <content type="html"><![CDATA[<p><a href="https://book.douban.com/subject/1047719/">https://book.douban.com/subject/1047719/</a></p>
@@ -181,8 +181,8 @@ sudo usermod -G 3003 root
     </entry>
     <entry>
         <title type="html"><![CDATA[DIARY 2020年5月]]></title>
-        <id>https://jinqimu.xyz/post/diary-2020-nian-5-yue/</id>
-        <link href="https://jinqimu.xyz/post/diary-2020-nian-5-yue/">
+        <id>https://jinqimu.github.io/post/diary-2020-nian-5-yue/</id>
+        <link href="https://jinqimu.github.io/post/diary-2020-nian-5-yue/">
         </link>
         <updated>2020-05-02T03:24:12.000Z</updated>
         <content type="html"><![CDATA[<ul>
@@ -215,8 +215,8 @@ sudo usermod -G 3003 root
     </entry>
     <entry>
         <title type="html"><![CDATA[PENTAX CUSTOM COLOR STYLE]]></title>
-        <id>https://jinqimu.xyz/post/pentax-custom-color-style/</id>
-        <link href="https://jinqimu.xyz/post/pentax-custom-color-style/">
+        <id>https://jinqimu.github.io/post/pentax-custom-color-style/</id>
+        <link href="https://jinqimu.github.io/post/pentax-custom-color-style/">
         </link>
         <updated>2020-04-29T06:14:01.000Z</updated>
         <summary type="html"><![CDATA[<p>This article is based on the PENTAX default color style which is called &quot;风雅&quot;(sorry I don't know the English name because I use the Chinese system). As a PENTAX user, setting is a very important skill.</p>
@@ -233,8 +233,8 @@ sudo usermod -G 3003 root
     </entry>
     <entry>
         <title type="html"><![CDATA[集成豆瓣简介到网页上]]></title>
-        <id>https://jinqimu.xyz/post/ji-cheng-dou-ban-jian-jie-dao-wang-ye-shang/</id>
-        <link href="https://jinqimu.xyz/post/ji-cheng-dou-ban-jian-jie-dao-wang-ye-shang/">
+        <id>https://jinqimu.github.io/post/ji-cheng-dou-ban-jian-jie-dao-wang-ye-shang/</id>
+        <link href="https://jinqimu.github.io/post/ji-cheng-dou-ban-jian-jie-dao-wang-ye-shang/">
         </link>
         <updated>2020-04-14T07:34:47.000Z</updated>
         <content type="html"><![CDATA[<p>转载于<a href="https://immmmm.com/post-show-douban-item/">@林木木</a><br>
@@ -320,8 +320,8 @@ sudo usermod -G 3003 root
     </entry>
     <entry>
         <title type="html"><![CDATA[DIARY 2020年4月]]></title>
-        <id>https://jinqimu.xyz/post/diary/</id>
-        <link href="https://jinqimu.xyz/post/diary/">
+        <id>https://jinqimu.github.io/post/diary/</id>
+        <link href="https://jinqimu.github.io/post/diary/">
         </link>
         <updated>2020-04-06T09:21:22.000Z</updated>
         <summary type="html"><![CDATA[<p>始于 <em>2020年4月6日</em></p>
@@ -357,8 +357,8 @@ sudo usermod -G 3003 root
     </entry>
     <entry>
         <title type="html"><![CDATA[哀悼COVID-19受难者]]></title>
-        <id>https://jinqimu.xyz/post/ai-dao-covid-19-shou-nan-zhe/</id>
-        <link href="https://jinqimu.xyz/post/ai-dao-covid-19-shou-nan-zhe/">
+        <id>https://jinqimu.github.io/post/ai-dao-covid-19-shou-nan-zhe/</id>
+        <link href="https://jinqimu.github.io/post/ai-dao-covid-19-shou-nan-zhe/">
         </link>
         <updated>2020-04-03T15:16:35.000Z</updated>
         <content type="html"><![CDATA[<h2 id="全站灰化一个月"><em><strong>全站灰化一个月</strong></em></h2>
@@ -367,8 +367,8 @@ sudo usermod -G 3003 root
     </entry>
     <entry>
         <title type="html"><![CDATA[杂谈 2020年4月1日]]></title>
-        <id>https://jinqimu.xyz/post/za-tan-2020-nian-4-yue-1-ri/</id>
-        <link href="https://jinqimu.xyz/post/za-tan-2020-nian-4-yue-1-ri/">
+        <id>https://jinqimu.github.io/post/za-tan-2020-nian-4-yue-1-ri/</id>
+        <link href="https://jinqimu.github.io/post/za-tan-2020-nian-4-yue-1-ri/">
         </link>
         <updated>2020-04-01T02:39:51.000Z</updated>
         <content type="html"><![CDATA[<p>近来天气阴沉，太阳也是许久未见了。自从一月爆出新冠以来，大大小小的事情发生了不少，多是悲伤，少有欢喜。</p>
@@ -380,8 +380,8 @@ sudo usermod -G 3003 root
     </entry>
     <entry>
         <title type="html"><![CDATA[使用VScode编辑前端（多终端实时刷新显示）]]></title>
-        <id>https://jinqimu.xyz/post/使用VScode编辑前端(多终端显示)/</id>
-        <link href="https://jinqimu.xyz/post/使用VScode编辑前端(多终端显示)/">
+        <id>https://jinqimu.github.io/post/使用VScode编辑前端(多终端显示)/</id>
+        <link href="https://jinqimu.github.io/post/使用VScode编辑前端(多终端显示)/">
         </link>
         <updated>2020-03-07T05:54:33.000Z</updated>
         <content type="html"><![CDATA[<h2 id="效果预览">效果预览</h2>
@@ -413,8 +413,8 @@ sudo usermod -G 3003 root
     </entry>
     <entry>
         <title type="html"><![CDATA[VScode对Unity_C#的简单补全]]></title>
-        <id>https://jinqimu.xyz/post/VScode对Unity脚本代码的简单补全/</id>
-        <link href="https://jinqimu.xyz/post/VScode对Unity脚本代码的简单补全/">
+        <id>https://jinqimu.github.io/post/VScode对Unity脚本代码的简单补全/</id>
+        <link href="https://jinqimu.github.io/post/VScode对Unity脚本代码的简单补全/">
         </link>
         <updated>2020-03-06T09:08:13.000Z</updated>
         <content type="html"><![CDATA[<p>本学期开了Unity3D的课，笔记本受性能限制用VS编辑C#较为卡顿，遂打算使用VScode。<br>
@@ -443,8 +443,8 @@ sudo usermod -G 3003 root
     </entry>
     <entry>
         <title type="html"><![CDATA[对Unity3D的理解]]></title>
-        <id>https://jinqimu.xyz/post/Unity3D_homeWork/</id>
-        <link href="https://jinqimu.xyz/post/Unity3D_homeWork/">
+        <id>https://jinqimu.github.io/post/Unity3D_homeWork/</id>
+        <link href="https://jinqimu.github.io/post/Unity3D_homeWork/">
         </link>
         <updated>2020-03-03T03:04:09.000Z</updated>
         <content type="html"><![CDATA[<h2 id="q1-什么是游戏引擎">Q1 什么是游戏引擎？</h2>
@@ -495,8 +495,8 @@ public class TenCube : MonoBehaviour {
     </entry>
     <entry>
         <title type="html"><![CDATA[运用JSDelivr GitHub PicGo搭建博客图床]]></title>
-        <id>https://jinqimu.xyz/post/运用JSDelivr GitHub PicGo搭建博客图床/</id>
-        <link href="https://jinqimu.xyz/post/运用JSDelivr GitHub PicGo搭建博客图床/">
+        <id>https://jinqimu.github.io/post/运用JSDelivr GitHub PicGo搭建博客图床/</id>
+        <link href="https://jinqimu.github.io/post/运用JSDelivr GitHub PicGo搭建博客图床/">
         </link>
         <updated>2020-03-02T11:33:03.000Z</updated>
         <content type="html"><![CDATA[<h1 id="preview">PREVIEW</h1>
@@ -517,8 +517,8 @@ public class TenCube : MonoBehaviour {
     </entry>
     <entry>
         <title type="html"><![CDATA[Nim博弈]]></title>
-        <id>https://jinqimu.xyz/post/Nim博弈/</id>
-        <link href="https://jinqimu.xyz/post/Nim博弈/">
+        <id>https://jinqimu.github.io/post/Nim博弈/</id>
+        <link href="https://jinqimu.github.io/post/Nim博弈/">
         </link>
         <updated>2019-03-23T08:53:09.000Z</updated>
         <content type="html"><![CDATA[<h1 id="nim博弈">Nim博弈</h1>
@@ -636,8 +636,8 @@ int main()
     </entry>
     <entry>
         <title type="html"><![CDATA[关于hexo博客]]></title>
-        <id>https://jinqimu.xyz/post/关于hexo博客/</id>
-        <link href="https://jinqimu.xyz/post/关于hexo博客/">
+        <id>https://jinqimu.github.io/post/关于hexo博客/</id>
+        <link href="https://jinqimu.github.io/post/关于hexo博客/">
         </link>
         <updated>2019-02-20T02:49:14.000Z</updated>
         <content type="html"><![CDATA[<p>关于hexo的文章网上已经很多了，我这里也不想再写</p>
@@ -660,8 +660,8 @@ hexo new %t%
     </entry>
     <entry>
         <title type="html"><![CDATA[西方经济学_宏观]]></title>
-        <id>https://jinqimu.xyz/post/西方经济学-宏观/</id>
-        <link href="https://jinqimu.xyz/post/西方经济学-宏观/">
+        <id>https://jinqimu.github.io/post/西方经济学-宏观/</id>
+        <link href="https://jinqimu.github.io/post/西方经济学-宏观/">
         </link>
         <updated>2019-01-06T01:41:28.000Z</updated>
         <content type="html"><![CDATA[<h1 id="宏观经济的基本指标及其衡量">宏观经济的基本指标及其衡量</h1>
