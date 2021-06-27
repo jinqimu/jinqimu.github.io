@@ -2,7 +2,7 @@
 <feed xmlns="http://www.w3.org/2005/Atom">
     <id>https://jinqimu.github.io</id>
     <title>JQM&apos;s site</title>
-    <updated>2021-06-26T11:06:10.118Z</updated>
+    <updated>2021-06-27T01:32:54.956Z</updated>
     <generator>https://github.com/jpmonette/feed</generator>
     <link rel="alternate" href="https://jinqimu.github.io"/>
     <link rel="self" href="https://jinqimu.github.io/atom.xml"/>
@@ -59,10 +59,10 @@
 <li>
 <p>配置 <em>设置</em> ：</p>
 <ul class="contains-task-list">
-<li class="task-list-item"><input class="task-list-item-checkbox" checked="" disabled="" type="checkbox" id="task-item-979308"><label class="task-list-item-label" for="task-item-979308"> 锁定WiFi</label></li>
-<li class="task-list-item"><input class="task-list-item-checkbox" checked="" disabled="" type="checkbox" id="task-item-6344971"><label class="task-list-item-label" for="task-item-6344971"> CPU唤醒</label></li>
-<li class="task-list-item"><input class="task-list-item-checkbox" checked="" disabled="" type="checkbox" id="task-item-8131331"><label class="task-list-item-label" for="task-item-8131331"> 开机自启动</label></li>
-<li class="task-list-item"><input class="task-list-item-checkbox" checked="" disabled="" type="checkbox" id="task-item-6367869"> <b>HTTP<label class="task-list-item-label" for="task-item-6367869"> <b>HTTP</b></label></li>
+<li class="task-list-item"><input class="task-list-item-checkbox" checked="" disabled="" type="checkbox" id="task-item-4190241"><label class="task-list-item-label" for="task-item-4190241"> 锁定WiFi</label></li>
+<li class="task-list-item"><input class="task-list-item-checkbox" checked="" disabled="" type="checkbox" id="task-item-2220250"><label class="task-list-item-label" for="task-item-2220250"> CPU唤醒</label></li>
+<li class="task-list-item"><input class="task-list-item-checkbox" checked="" disabled="" type="checkbox" id="task-item-6176236"><label class="task-list-item-label" for="task-item-6176236"> 开机自启动</label></li>
+<li class="task-list-item"><input class="task-list-item-checkbox" checked="" disabled="" type="checkbox" id="task-item-2563460"> <b>HTTP<label class="task-list-item-label" for="task-item-2563460"> <b>HTTP</b></label></li>
 </ul>
 </li>
 <li>
